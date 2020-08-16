@@ -1,0 +1,43 @@
+/* General Page Styles */
+/* Setting page height to keep footer at bottom. */
+html {
+    height: 100%;
+}
+
+/* Navbar Styles */
+nav a.navbar-brand.mb-1 {
+    width: 400px;
+    max-width: 50%;
+    min-width: 200px;
+}
+
+a.navbar-brand img.name-logo {
+    width: 400px;
+    max-width: 75%;
+    min-width: 200px;
+}
+
+/* Styles to override the color of nav links for hover and active states. */
+.navbar-light .navbar-nav .active .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show .nav-link {
+    color: #007bff;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Styles for Contact Form */
+main.container.mx-auto.p-3.bg-white.col-12.col-md-10.col-lg-8.col-xl-6 {
+    max-height: 500px;
+}
+
+/* Footer Styles */
+footer.container.mt-auto.border-top.border-primary.mx-auto {
+    width: 260px;
+}
+
+footer.container img.bg-transparent.mb-4.mt-2.text-muted {
+    height: 12px;
+    width: 230px;
+    opacity: 75%;
+}

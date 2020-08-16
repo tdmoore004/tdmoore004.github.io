@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tanner Moore: Contact Me</title>
+
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!-- Personal CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+  <!-- Nav Bar: Name and links to About, Portfolio, Contact and Social. -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white pl-3 sticky-top">
+    <a class="navbar-brand mb-1">
+      <img class="name-logo" src="./assets/images/tannermoore_name.png" alt="Tanner Moore Mountain Logo" loading="lazy">
+    </a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <nav class="navbar-collapse collapse justify-content-end pr-3" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./index.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="./contact.html">Contact <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Social
+          </a>
+          <nav class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="https://www.linkedin.com/in/tannerdmoore004/" target="_blank">LinkedIn</a>
+            <a class="dropdown-item" href="https://github.com/tdmoore004" target="_blank">GitHub</a>
+            <a class="dropdown-item" href="https://www.instagram.com/exploremoore_ten4/" target="_blank">Instagram</a>
+            <a class="dropdown-item" href="https://www.facebook.com/tanman.ten4/" target="_blank">Facebook</a>
+          </nav>
+        </li>
+      </ul>
+    </nav>
+  </nav>
+
+  <!-- Contact Form: Name, Email, Message and Submit button. -->
+  <main class="container mx-auto p-3 bg-white col-12 col-md-10 col-lg-8 col-xl-6">
+    <h3 class="border-bottom border-primary mb-4 pb-2">
+      Contact
+    </h3>
+    <section>
+      <form class="mx-2">
+        <section class="form-group">
+          <label for="contactFormName">Name</label>
+          <input type="text" class="form-control" id="contactFormName" placeholder="Name">
+        </section>
+        <section class="form-group">
+          <label for="contactFormEmail">Email</label>
+          <input type="email" class="form-control" id="contactFormEmail" placeholder="Email">
+        </section>
+        <section class="form-group">
+          <label for="contactFormMessage">Message</label>
+          <textarea class="form-control" id="contactFormMessage" rows="4" placeholder="Message"></textarea>
+        </section>
+        <button type="submit" class="btn btn-primary btn-lg mt-1">Submit</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="container mt-auto border-top border-primary mx-auto">
+    <img class="bg-transparent mb-4 mt-2 text-muted" src="./assets/images/tannermoore_productions.png"
+      alt="Tanner Moore Productions" loading="lazy">
+  </footer>
+
+  <!-- Bootstrap JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
