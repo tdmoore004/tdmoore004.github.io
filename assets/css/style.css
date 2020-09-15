@@ -41,3 +41,8 @@ footer.container img.bg-transparent.mb-4.mt-2.text-muted {
     width: 230px;
     opacity: 75%;
 }
+
+/* Image styling */
+img.col-12.mt-2.mb-4.mx-auto {
+    max-width: 820px;
+}
