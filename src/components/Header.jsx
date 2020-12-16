@@ -25,7 +25,7 @@ class Header extends Component {
                 <figure className="top-bar-left">
 
                     {/* Name logo and link back to about. */}
-                    <a href="/react-portfolio">
+                    <a href="/">
                         <img id="logo" src={nameLogo} alt="Tanner Moore Logo" loading="lazy">
                         </img>
                     </a>
@@ -42,9 +42,9 @@ class Header extends Component {
                 {/* Navbar menu */}
                 <nav className="top-bar-right" id="nav-menu">
                     <ul className="dropdown vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
-                        <li><a href="/react-portfolio">About</a></li>
-                        <li><a href="/react-portfolio/portfolio">Portfolio</a></li>
-                        <li><a href="/react-portfolio/contact">Contact</a></li>
+                        <li><a href="/">About</a></li>
+                        <li><a href="/portfolio">Portfolio</a></li>
+                        <li><a href="/contact">Contact</a></li>
                         <li>
                             <a className="social-dropdown">Social</a>
                             <ul className="nested vertical menu">
