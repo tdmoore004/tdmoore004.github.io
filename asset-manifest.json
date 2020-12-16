@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.098609c5.chunk.css",
+    "main.js": "/static/js/main.c807cb95.chunk.js",
+    "main.js.map": "/static/js/main.c807cb95.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0197b26b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0197b26b.js.map",
+    "static/css/2.6129af40.chunk.css": "/static/css/2.6129af40.chunk.css",
+    "static/js/2.e13c1e35.chunk.js": "/static/js/2.e13c1e35.chunk.js",
+    "static/js/2.e13c1e35.chunk.js.map": "/static/js/2.e13c1e35.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.6129af40.chunk.css.map": "/static/css/2.6129af40.chunk.css.map",
+    "static/css/main.098609c5.chunk.css.map": "/static/css/main.098609c5.chunk.css.map",
+    "static/js/2.e13c1e35.chunk.js.LICENSE.txt": "/static/js/2.e13c1e35.chunk.js.LICENSE.txt",
+    "static/media/boredom-buster-screen-recording.a39f5882.gif": "/static/media/boredom-buster-screen-recording.a39f5882.gif",
+    "static/media/budget-tracker-screen-recording.2a18c8ed.gif": "/static/media/budget-tracker-screen-recording.2a18c8ed.gif",
+    "static/media/devour-da-burger-screen-recording.6a321663.gif": "/static/media/devour-da-burger-screen-recording.6a321663.gif",
+    "static/media/express-note-taker-screen-recording.dbe19c29.gif": "/static/media/express-note-taker-screen-recording.dbe19c29.gif",
+    "static/media/fitness-tracker-screen-recording.e1e038df.gif": "/static/media/fitness-tracker-screen-recording.e1e038df.gif",
+    "static/media/furlodge-screen-recording.693cbf27.gif": "/static/media/furlodge-screen-recording.693cbf27.gif",
+    "static/media/profilepic-philippines-0015.c58ed290.jpg": "/static/media/profilepic-philippines-0015.c58ed290.jpg",
+    "static/media/tannermoore_name.c2802a27.png": "/static/media/tannermoore_name.c2802a27.png",
+    "static/media/tannermoore_productions.5153f464.png": "/static/media/tannermoore_productions.5153f464.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0197b26b.js",
+    "static/css/2.6129af40.chunk.css",
+    "static/js/2.e13c1e35.chunk.js",
+    "static/css/main.098609c5.chunk.css",
+    "static/js/main.c807cb95.chunk.js"
+  ]
+}
