@@ -62,7 +62,7 @@ section.grid-x.headline {
 /* About Me Content */
 p.card-section.aboutMe, p.aboutMe {
     margin: 0;
-    padding: 10px 10px 20px;
+    padding: 10px 10px 10px;
     max-width: 1200px;
     font-size: 17px;
     color: rgb(225, 225, 225);
@@ -127,6 +127,7 @@ img.codingLanguagesBottom {
 
     p.card-section.aboutMe, p.aboutMe {
         font-size: 15px;
+        padding: 10px 10px 20px;
     }
 
     section.cell.medium-4.codingLanguages.top {
