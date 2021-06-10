@@ -79,11 +79,12 @@ section.card-section {
 /* Logos */
 section.cell.medium-4.mtnLogo {
     margin: auto;
-    opacity: 90%;
+    opacity: .9;
 }
 
 section.cell.medium-4.codingLanguages.top {
     margin: auto;
+    opacity: .9;
 }
 
 section.cell.medium-6.codingLanguages.bottom {
@@ -92,7 +93,7 @@ section.cell.medium-6.codingLanguages.bottom {
 
 img.codingLanguagesBottom {
     display: none;
-    opacity: 90%;
+    opacity: .9;
 }
 
 /* Responsive Design */
