@@ -1,80 +1,129 @@
 import React from "react";
 
-// Importing Project component.
-import Project from "../components/Project.jsx"
+// Importing style sheet for page.
+import "./Portfolio.css"
 
-// Importing screen recording gifs for each featured project.
-import FurLodgeGif from "../assets/images/furlodge-screen-recording.gif";
-import BoredomBusterGif from "../assets/images/boredom-buster-screen-recording.gif";
-import DevourBurgerGif from "../assets/images/devour-da-burger-screen-recording.gif";
-import BudgetGif from "../assets/images/budget-tracker-screen-recording.gif";
-import NoteTakerGif from "../assets/images/express-note-taker-screen-recording.gif"
-import FitnessTrackerGif from "../assets/images/fitness-tracker-screen-recording.gif"
+// Importing Project component.
+import ProjectTeaser from "../components/ProjectTeaser.jsx"
+
+// Importing screen recording gifs and headers for each featured project.
+import DesignDevelopHeader from "../assets/images/headers/design-development-header.png"
+import TravelerHeader from "../assets/images/headers/traveler-header.png"
+import FurlodgeHeader from "../assets/images/headers/furlodge-header.png"
+import BoredomBusterHeader from "../assets/images/headers/boredom-buster-header.png"
+import DevourBurgerHeader from "../assets/images/headers/burger-header.png"
+import DevelopHeader from "../assets/images/headers/development-header.png"
+import BudgetHeader from "../assets/images/headers/budget-tracker-header.png"
+import FitnessTrackeHeader from "../assets/images/headers/fitness-tracker-header.png"
+import TravelerGif from "../assets/images/project-screenshots/traveler-screenshot.jpg"
+import FurLodgeGif from "../assets/images/project-screenshots/furlodge-screenshot.jpg";
+import BoredomBusterGif from "../assets/images/project-screenshots/boredom-buster-screenshot.jpg";
+import DevourBurgerGif from "../assets/images/project-screenshots/devour-da-burger-screenshot.jpg";
+import BudgetGif from "../assets/images/project-screenshots/budget-tracker-screenshot.jpg";
+import FitnessTrackerGif from "../assets/images/project-screenshots/fitness-tracker-screenshot.jpg"
 
 const Portfolio = () => {
     return (
         <main className="card grid-container grid-x align-center portfolio">
 
-            {/* Page Header */}
-            <h3 className="card-divider">
-                Portfolio
-            </h3>
+            <h1 className="hidden-header">What I Do</h1>
 
             {/* Project Highlights */}
-            <section className="card-section">
-                <div className="grid-x grid-margin-x medium-up-2">
-                    <Project
+            <section className="card-section portfolio">
+
+                <h2 className="hidden-header">Web Design &amp; Development</h2>
+
+                <img className="design-develop-header" src={DesignDevelopHeader} alt="Web Design &amp; Development" loading="lazy" />
+
+                {/* <hr className="portfolio-hr" /> */}
+                <div className="grid-x grid-margin-x large-up-2">
+
+                    <ProjectTeaser
+                        appName="Traveler"
+                        projectPage="/portfolio/traveler"
+                        appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                        appID="traveler"
+                        appHeader={TravelerHeader}
+                        appGif={TravelerGif}
+                        gifAlt="Traveler Screen Recording"
+                        frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                        appDescription="Take the worry and stress out of traveling with Traveler. Keep track of all your flights, lodging, and activities in one convienant location available to access anytime, anywhere."
+                    />
+
+                    <ProjectTeaser
+                        appName="Furlodge"
+                        projectPage="/portfolio/furlodge"
                         appLink="https://glacial-gorge-49813.herokuapp.com/"
-                        appName="FurLodge"
+                        appID="furlodge"
+                        appHeader={FurlodgeHeader}
                         appGif={FurLodgeGif}
                         gifAlt="FurLodge Screen Recording"
-                        githubLink="https://github.com/tdmoore004/fur-lodge"
-                        appDescription="Do you have a fur baby that you want the best personalized care for while you are out of town or busy? Check out FurLodge to find fellow fur baby lovers and owners who are willing to watch your beloved pet and give them the same personalized care you want for them."
+                        frameLanguages="HTML  | CSS | JavaScript | JQuery | Foundation CSS | Node.js | Express.js | Express Handlebars | Sequelize | Passport | Bcrypt"
+                        appDescription="Give your furbabies the care they deserve while you are away, or busy, with FurLodge. Find a host that meets your needs and that will show them the same affection as you."
                     />
-                    <Project
-                        appLink="https://tdmoore004.github.io/boredom-buster/"
+
+                    <ProjectTeaser
                         appName="Boredom Buster"
+                        projectPage="/portfolio/boredom-buster"
+                        appLink="https://tdmoore004.github.io/boredom-buster/index.html"
+                        appID="boredom-buster"
+                        appHeader={BoredomBusterHeader}
                         appGif={BoredomBusterGif}
                         gifAlt="Boredom Buster Screen Recording"
-                        githubLink="https://github.com/tdmoore004/boredom-buster"
-                        appDescription="If you are bored and looking for something to do, Boredom Buster will help you quench that thirst for action. Use Boredom Buster to generate a random, or more specific, activity that you can do and save them for later if you need to keep your boredom organized."
+                        frameLanguages="HTML  | CSS | JavaScript | JQuery | Materialize CSS | Bored API | Google Books API"
+                        appDescription="Are you bored and can not think of anything to do? Use Boredom Buster to find a random activity, or one based on your criteria, and some related books to keep you busy."
                     />
-                    <Project
-                        appLink="https://ancient-garden-46972.herokuapp.com/"
-                        appName="Devour Da Burger!"
+
+                    <ProjectTeaser
+                        appName="Devour Da Burger"
+                        projectPage="/portfolio/devour-da-burger"
+                        appLink="https://glacial-gorge-49813.herokuapp.com/"
+                        appID="devour-da-burger"
+                        appHeader={DevourBurgerHeader}
                         appGif={DevourBurgerGif}
                         gifAlt="Devour Da Burger Screen Recording"
-                        githubLink="https://github.com/tdmoore004/devour-da-burger"
-                        appDescription="Do you love devouring all sorts of different burgers? Utilize Devour Da Burger to keep a list of any burger that you want to devour and mark of the ones that you have already eaten moving them to the 'devoured' list."
+                        frameLanguages="HTML  | CSS | JavaScript | JQuery | Skeleton CSS | Node.js | Express.js | Sequelize"
+                        appDescription="Keep track of the burgers you want to devour and those you already have with Devour Da Burger. Add the burger you want to devour or mark those you have eaten as devoured."
                     />
-                    <Project
-                        appLink="https://aqueous-plains-59839.herokuapp.com/"
-                        appName="Progressive Budget Offline"
+
+                </div>
+
+                <h2 className="hidden-header">Web Development</h2>
+
+                <img className="design-develop-header" src={DevelopHeader} alt="Web Development" loading="lazy" />
+
+                {/* <hr className="portfolio-hr" /> */}
+                <div className="grid-x grid-margin-x large-up-2">
+
+                    <ProjectTeaser
+                        appName="Budget Tracker"
+                        projectPage="/portfolio/budget-tracker"
+                        appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                        appID="budget-tracker"
+                        appHeader={BudgetHeader}
                         appGif={BudgetGif}
-                        gifAlt="Progressive Budget Screen Recording"
-                        githubLink="https://github.com/tdmoore004/progressive-budget-offline"
-                        appDescription="Do you want to keep track of the money that you are spending but are not always online to do it? Well worry no more! With the Progressive Budget Offline app you can track all of your transactions whether you are connected to the internet or not."
+                        gifAlt="Budget Tracker Recording"
+                        frameLanguages="HTML | JavaScript | JQuery | Node.js | Express.js | Sequelize"
+                        appDescription="Whether you spent money on a new toy, went out to dinner with some friends, or just got paid you can keep track of all your expenses, both online and offline, with Budget Tracker."
                     />
-                    <Project
-                        appLink="https://floating-sands-65820.herokuapp.com/"
-                        appName="Express Note Taker"
-                        appGif={NoteTakerGif}
-                        gifAlt="Express Note Taker Screen Recording"
-                        githubLink="https://github.com/tdmoore004/express-note-taker"
-                        appDescription="Need to keep track of your thoughts and feelings regarding different topics? Use the Express Note Taker to log those thoughts and feelings and save them for later. Whether it be notes on a class lecture, a breakthrough business idea that you had or a rough draft on a speech that you have to give."
-                    />
-                    <Project
-                        appLink="https://cryptic-hollows-98760.herokuapp.com/"
+
+                    <ProjectTeaser
                         appName="Fitness Tracker"
+                        projectPage="/portfolio/fitness-tracker"
+                        appLink="https://glacial-gorge-49813.herokuapp.com/"
+                        appID="fitness-tracker"
+                        appHeader={FitnessTrackeHeader}
                         appGif={FitnessTrackerGif}
                         gifAlt="Fitness Tracker Screen Recording"
-                        githubLink="https://github.com/tdmoore004/workout-tracker"
-                        appDescription="Are you a physically active individual who wants to keep track of your fitness activity? Utilize this Fitness Tracker to log both your cardio and resistance workouts. Look back at your physical fitness and see the progress you are making."
+                        frameLanguages="HTML | JavaScript | JQuery | Node.js | Express.js | Sequelize"
+                        appDescription="Stay healthy and active! Keep track of your fitness with Fitness Tracker. Track the type of physical activity, the duration, and amount of resistance in one place."
                     />
+
                 </div>
+
             </section>
-            
-        </main>
+
+        </main >
     )
 }
 

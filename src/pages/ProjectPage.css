@@ -1,0 +1,112 @@
+/* Page styles */
+body {
+    background-color: rgba(15, 15, 15);
+}
+
+/* Project page styles */
+main.card.grid-container.grid-x.align-center.project {
+    background-color: rgb(15, 15, 15, 0.9);
+    padding: 5px 0 0;
+    border: none;
+    max-width: 1200px;
+}
+
+img.cell.medium-6.project-title-header {
+    padding: 15px 0px 0px;
+    width: auto;
+    max-height: 70px;
+    margin-right: auto;
+}
+
+div.cell.medium-6.button-group.align-right.app-links {
+    padding: 15px 0px 0px;
+    margin: 0 15px;
+}
+
+div.cell.medium-6.button-group.align-right.app-links a.button {
+    font-size: 18px;
+    margin: 5px 5px 10px;
+    padding: 10px 20px;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #4c799b;
+}
+
+div.cell.medium-6.button-group.align-right.app-links a.button:hover {
+    background-color: #639eca;
+}
+
+section.card.project {
+    background-color: rgb(15, 15, 15, 0.9);
+    border: none;
+    margin: 0 15px 15px;
+    max-width: 100%;
+    padding: 0;
+}
+
+img.web-dev-photo.project-gif {
+    padding: 0;
+    border-radius: 5px 5px 5px 5px;
+}
+
+section.project-info {
+    padding: 0 10px;
+}
+
+p.project-description, p.project-history, p.project-future {
+    font-size: 16px;
+    color: white;
+    margin: 0px 0px 10px;
+}
+
+p.app-language-frameworks, p.login-info {
+    font-size: 16px;
+    color: white;
+    margin: 0px 0px 10px;
+}
+
+a.back-to-work {
+    font-size: 20px;
+    color: #7dc7ff;
+    margin: 0px 10px;
+    width: auto;
+}
+
+a.back-to-work:hover {
+    color: #4c799b;
+}
+
+hr.project-hr {
+    margin: 5px 0px 10px;
+    border-color: #71b2e48f;
+    max-width: 100%;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 639px) {
+    section.card-section.portfolio {
+        margin: 0 10px 10px;
+    }
+
+    img.cell.medium-6.project-title-header {
+        width: auto;
+        max-height: 50px;
+        margin: auto;
+    }
+
+    div.cell.medium-6.button-group.align-right.app-links {
+        padding: 5px 0px 0px;
+        margin: auto;
+    }
+
+    div.cell.medium-6.button-group.align-right.app-links a.button {
+        font-size: 16px;
+        margin: 0px 5px 12px;
+        padding: 10px 15px;
+        border-radius: 5px 5px 5px 5px;
+        background-color: #4c799b;
+    }
+
+    .align-right {
+        justify-content: center;
+    }
+}

@@ -1,0 +1,131 @@
+section.card.grid-container.grid-x.align-center.home {
+    max-width: 1200px;
+    margin: auto;
+    border: none;
+    padding: 0px 20px 10px;
+    background-color: rgb(15, 15, 15, 0.9);
+}
+
+div.card.web-dev.portfolio {
+    padding: 0;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    margin: 15px 0;
+    position: relative;
+}
+
+img.web-dev-photo.mobile {
+    display: none;
+}
+
+img.web-dev-photo-home {
+    padding: 0px 0px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    background-color: rgb(15, 15, 15);
+}
+
+h3.home-card-title-about {
+    position: absolute;
+    font-size: 60px;
+    margin: 0;
+    top: 10%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+}
+
+h3.home-card-title {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    margin: 0;
+    top: 10%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+}
+
+a.home-overlay.about {
+    position: absolute;
+    background-image: linear-gradient(170deg, transparent, transparent, rgb(10, 10, 10));
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+}
+
+a.home-overlay.work, a.home-overlay.connect {
+    position: absolute;
+    background-image: linear-gradient(170deg, transparent, transparent, rgba(10, 10, 10, 0.75), rgb(10, 10, 10));
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+}
+
+div.card.web-dev.portfolio:hover a.home-overlay, div.card.web-dev.portfolio:active a.home-overlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+div.home-info {
+    width: 460px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4.home-title {
+    font-size: 30px;
+    color: white;
+    margin: 0px;
+}
+
+p.home-description {
+    font-size: 16px;
+    color: white;
+}
+
+h5.app-language-frameworks {
+    font-size: 16px;
+    color: white;
+}
+
+hr.home {
+    margin: 15px;
+    border-color: #71b2e48f;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 639px) {
+    section.card-section.portfolio {
+        margin: 0 10px 10px;
+    }
+
+    div.card.web-dev {
+        margin: 10px 0;
+    }
+
+    img.web-dev-photo.desktop {
+        display: none;
+    }
+
+    a.home-overlay.about, a.home-overlay.work, a.home-overlay.connect {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    a.home-overlay.work, a.home-overlay.connect {
+        background-image: linear-gradient(170deg, transparent, transparent, rgb(10, 10, 10));
+    }
+
+    img.web-dev-photo.mobile {
+        display: inline-block;
+    }
+}

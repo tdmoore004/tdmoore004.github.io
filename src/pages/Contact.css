@@ -1,0 +1,48 @@
+main.card.grid-container.grid-x.align-center.contact {
+    width: 95%;
+    max-width: 650px;
+    align-self: center;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    background-color: rgb(15, 15, 15, 0.9);;
+}
+
+h3.card-divider.contact {
+    background: transparent;
+    color: white;
+    padding: 20px 20px 0px;
+    margin: 0px;
+}
+
+img.connect-header {
+    padding: 20px 15px 0px;
+    margin: 0px;
+}
+
+section.card-section.contact {
+    padding: 5px 30px;
+    margin: 0px;
+}
+
+h5.contactMe {
+    margin: 0px 0px 10px;
+}
+
+p.contactMe.cell {
+    margin: 0px 10px 10px 16px;
+}
+
+hr.contactMe {
+    margin: 10px 20px;
+    border-color: #71b2e48f;
+}
+
+a.contactInfo {
+    padding: 0 0 0 10px;
+    color: white;
+    font-size: 16px;
+}
+
+a.contactInfo:hover {
+    color: #71b2e4;
+}

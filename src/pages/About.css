@@ -1,0 +1,146 @@
+/* Page styles */
+body {
+    background-color: rgba(15, 15, 15, 0.65);
+}
+
+/* About page styles */
+section.card.grid-container.grid-x.align-center.about {
+    align-self: center;
+    border: none;
+    padding: 20px 20px 10px;
+    margin: 0px;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, transparent, rgb(15, 15, 15, .70) .5%, rgb(15, 15, 15, .85), rgb(15, 15, 15), rgb(15, 15, 15));
+}
+
+.grid-container {
+    max-width: 100%;
+}
+
+/* Profile Pic */
+img.profilePic.desktop.fixed {
+    width: 100%;
+    position: fixed;
+    z-index: -10;
+}
+
+img.profilePic.mobile.fixed {
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: -10;
+}
+
+img.profilePic.desktop.hidden {
+    width: 100%;
+    visibility: hidden;
+}
+
+img.profilePic.mobile.hidden {
+    width: 100%;
+    display: none;
+}
+
+/* About Me Heading */
+h3.card-divider.about {
+    background-color: transparent;
+    font-size: 35px;
+    margin: auto;
+    padding: 0px 0px 0px 10px;
+    max-width: 1200px;
+    color: rgb(225, 225, 225);
+}
+
+img.about-header {
+    padding: 0px 0px 0px 5px;
+}
+
+section.grid-x.headline {
+    padding: 10px 0 20px;
+}
+
+/* About Me Content */
+p.card-section.aboutMe, p.aboutMe {
+    margin: 0;
+    padding: 10px 10px 20px;
+    max-width: 1200px;
+    font-size: 17px;
+    color: rgb(225, 225, 225);
+}
+
+section.card-section {
+    padding: 10px 20px 20px;
+    margin: auto;
+    max-width: 1200px;
+    font-size: 17px;
+    color: rgb(225, 225, 225);
+}
+
+/* Logos */
+section.cell.medium-4.mtnLogo {
+    margin: auto;
+    opacity: 90%;
+}
+
+section.cell.medium-4.codingLanguages.top {
+    margin: auto;
+}
+
+section.cell.medium-6.codingLanguages.bottom {
+    display: none;
+}
+
+img.codingLanguagesBottom {
+    display: none;
+    opacity: 90%;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 639px) {
+    img.profilePic.desktop.fixed {
+        display: none;
+    }
+    
+    img.profilePic.desktop.hidden {
+        display: none;
+    }
+
+    img.profilePic.mobile.fixed {
+        display: inline-block;
+    }
+
+    img.profilePic.mobile.hidden {
+        display: inline-block;
+        visibility: hidden;
+    }
+
+    section.card-section {
+        padding: 0;
+    }
+
+    h3.card-divider.about {
+        background-color: transparent;
+        font-size: 20px;
+        margin: 0px;
+    }
+
+    p.card-section.aboutMe, p.aboutMe {
+        font-size: 15px;
+    }
+
+    section.cell.medium-4.codingLanguages.top {
+        display: none;
+    }
+
+    img.codingLanguagesTop {
+        display: none;
+    }
+    
+    section.cell.medium-6.codingLanguages.bottom {
+        display: inline-block;
+    }
+
+    img.codingLanguagesBottom {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,150 @@
+/* Page styles */
+body {
+    background-color: rgba(15, 15, 15);
+}
+
+/* Portfolio page styles */
+main.card.grid-container.grid-x.align-center.portfolio {
+    border: none;
+    margin: 0;
+    background-color: rgb(15, 15, 15, 0.9);
+}
+
+img.design-develop-header {
+    padding: 10px 0px 0px;
+    max-height: 50px;
+}
+
+section.card-section.portfolio {
+    margin: 0 15px 15px;
+    max-width: 100%;
+    padding: 0;
+}
+
+div.card.web-dev.portfolio {
+    padding: 0;
+    border-radius: 5px 5px 5px 5px;
+    border: none;
+    margin: 15px 0;
+    position: relative;
+}
+
+img.web-dev-photo {
+    padding: 0px 0px;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+a.project-overlay {
+    position: absolute;
+    background-color: rgb(15, 15, 15, 0.7);
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+    z-index: -1;
+    text-align: center;
+}
+
+div.card.web-dev.portfolio:hover a.project-overlay, div.card.web-dev.portfolio:active a.project-overlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+div.project-info-teaser {
+    width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h4.project-title {
+    font-size: 30px;
+    color: white;
+    margin: 0px;
+}
+
+img.project-title {
+    max-height: 45px;
+    margin: auto;
+}
+
+p.project-description-teaser {
+    font-size: 16px;
+    color: white;
+}
+
+h5.app-language-frameworks-teaser {
+    font-size: 16px;
+    color: white;
+}
+
+hr.portfolio-hr {
+    margin: 0px;
+    border-color: #71b2e48f;
+    max-width: 100%;
+}
+
+hr.project-teaser {
+    margin: 15px 10px;
+    border-color: #71b2e48f;
+}
+
+p.project-learn-more {
+    margin: 0;
+    color: #7ac5ff;
+}
+
+p.project-learn-more:hover {
+    color: #73b4e6;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 639px) {
+    section.card-section.portfolio {
+        margin: 0 10px 10px;
+    }
+
+    div.card.web-dev {
+        margin: 10px 0;
+    }
+
+    img.design-develop-header {
+        max-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 525px) {
+    div.project-info-teaser {
+        width: 370px;
+    }
+    
+    h5.app-language-frameworks-teaser {
+        display: none;
+    }
+
+    img.project-title {
+        max-height: 35px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    p.project-description-teaser, hr.project-teaser {
+        display: none;
+    }
+
+    p.project-learn-more {
+        color: #659eca;
+    }
+
+    hr.project-teaser.hr-1 {
+        display: block;
+        max-width: 65%;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+}

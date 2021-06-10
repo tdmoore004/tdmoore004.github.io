@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 // Importing Foundation CSS and JS as well as personal styles.
 import "foundation-sites/dist/css/foundation.min.css";
 import "foundation-sites/dist/js/foundation.min.js";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./index.css";
 
 // Importing App for the rendering of each page and component.
