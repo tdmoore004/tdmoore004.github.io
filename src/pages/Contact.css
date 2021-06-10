@@ -39,10 +39,10 @@ hr.contactMe {
 
 a.contactInfo {
     padding: 0 0 0 10px;
-    color: white;
+    color: #7dc7ff;
     font-size: 16px;
 }
 
 a.contactInfo:hover {
-    color: #71b2e4;
+    color: #4c799b;
 }
