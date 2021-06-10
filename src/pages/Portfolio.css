@@ -21,7 +21,7 @@ section.card-section.portfolio {
     padding: 0;
 }
 
-div.card.web-dev.portfolio {
+section.card.web-dev.portfolio {
     padding: 0;
     border-radius: 5px 5px 5px 5px;
     border: none;
@@ -48,12 +48,12 @@ a.project-overlay {
     text-align: center;
 }
 
-div.card.web-dev.portfolio:hover a.project-overlay, div.card.web-dev.portfolio:active a.project-overlay {
+section.card.web-dev.portfolio:hover a.project-overlay, section.card.web-dev.portfolio:active a.project-overlay {
     opacity: 1;
     z-index: 1;
 }
 
-div.project-info-teaser {
+section.project-info-teaser {
     width: 450px;
     position: absolute;
     top: 50%;
@@ -108,19 +108,12 @@ p.project-learn-more:hover {
         margin: 0 10px 10px;
     }
 
-    div.card.web-dev {
-        margin: 10px 0;
-    }
-
     img.design-develop-header {
         max-height: 40px;
     }
 }
 
 @media only screen and (max-width: 525px) {
-    div.project-info-teaser {
-        width: 370px;
-    }
     
     h5.app-language-frameworks-teaser {
         display: none;
