@@ -190,10 +190,14 @@ hr.home {
 @media only screen and (max-width: 639px) {
     section.profile-pic-home {
         background-image: url(../assets/images/other/profilepic-philippines-0015-mobile-home.jpg);
+        background-attachment: scroll;
+
     }
 
     section.coding-pic-home {
         background-image: url(../assets/images/other/web-development-pic-home-mobile.jpg);
+        background-attachment: scroll;
+
     }
 
     img.profile-overlay-home.desktop {
