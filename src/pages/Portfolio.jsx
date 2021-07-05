@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Importing style sheet for page.
 import "./Portfolio.css"
@@ -23,6 +23,11 @@ import BudgetGif from "../assets/images/project-screenshots/budget-tracker-scree
 import FitnessTrackerGif from "../assets/images/project-screenshots/fitness-tracker-screenshot.jpg"
 
 const Portfolio = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
+
     return (
         <main className="card grid-container grid-x align-center portfolio">
 

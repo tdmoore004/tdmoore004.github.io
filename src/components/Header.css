@@ -11,7 +11,7 @@ header#mainNavigation.top-bar {
     border-bottom: 2px;
     position: fixed;
     top: 0;
-    background: rgb(15, 15, 15, .9);
+    background: rgb(15, 15, 15, .70);
     width: 100%;
 }
 
@@ -76,7 +76,7 @@ li.is-submenu-item.is-dropdown-submenu-item a:hover {
 /* Media query for responsive navbar */
 @media only screen and (max-width: 639px) {
     .top-bar, .top-bar ul {
-        background: rgb(15, 15, 15, .9);
+        background: rgb(15, 15, 15, .75);
     }
     .top-bar-right {
         margin-top: 8px;

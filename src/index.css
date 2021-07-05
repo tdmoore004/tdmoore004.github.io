@@ -3,7 +3,7 @@ body {
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
-    padding: 55px 0 156px;
+    padding: 0 0 107px;
     position: relative;
 }
 
@@ -22,12 +22,12 @@ div.grid-container.grid-x {
 /* Media queries for changing the body padding for footer and header space */
 @media only screen and (max-width: 1023px) {
     body {
-        padding: 55px 0 259px;
+        padding: 0 0 147px;
     }
 }
 
 @media only screen and (max-width: 287px) {
     body {
-        padding: 55px 0 270px;
+        padding: 0 0 168px;
     }
 }

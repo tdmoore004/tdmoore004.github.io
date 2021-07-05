@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // Importing style sheet for page.
 import "./ProjectPage.css"
@@ -22,7 +22,9 @@ import FitnessTrackerGif from "../assets/images/project-screenshots/fitness-trac
 
 const ProjectPage = () => {
 
-    console.log(window.location.pathname);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return (
         <main className="card grid-container grid-x align-center project">

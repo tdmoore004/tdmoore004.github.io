@@ -6,7 +6,7 @@ body {
 /* Portfolio page styles */
 main.card.grid-container.grid-x.align-center.portfolio {
     border: none;
-    margin: 0;
+    margin-top: 60px;
     background-color: rgb(15, 15, 15, 0.9);
 }
 

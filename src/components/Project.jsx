@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDoubleLeft } from "@fortawesome/free-solid-svg-icons";
+
 // Reusable project component for each project page.
 const Project = (props) => {
 
@@ -43,8 +46,9 @@ const Project = (props) => {
 
                 <hr className="project-hr" />
 
-                <section>
+                <section className="back-to-work">
                     <Link to="/portfolio" className="back-to-work">
+                        <FontAwesomeIcon className="fas fa-double-angle-left" icon={faAngleDoubleLeft} />
                         Back to my work
                     </Link>
                 </section>

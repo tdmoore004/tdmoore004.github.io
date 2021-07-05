@@ -7,6 +7,7 @@ body {
 main.card.grid-container.grid-x.align-center.project {
     background-color: rgb(15, 15, 15, 0.9);
     padding: 5px 0 0;
+    margin-top: 55px;
     border: none;
     max-width: 1200px;
 }
@@ -32,7 +33,7 @@ div.cell.medium-6.button-group.align-right.app-links a.button {
 }
 
 div.cell.medium-6.button-group.align-right.app-links a.button:hover {
-    background-color: #639eca;
+    background-color: #325169;
 }
 
 section.card.project {
@@ -71,7 +72,12 @@ a.back-to-work {
     width: auto;
 }
 
-a.back-to-work:hover {
+.fas.fa-double-angle-left {
+    font-size: 20px;
+    margin: 0px 10px;
+}
+
+a.back-to-work:hover, .fas.fa-double-angle-left:hover {
     color: #4c799b;
 }
 

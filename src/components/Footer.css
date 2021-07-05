@@ -2,10 +2,11 @@
 footer.large.callout.secondary {
     position: absolute;
     bottom: 0;
+    z-index: 3;
     width: 100%;
     margin: 0;
     padding: 25px 25px;
-    background-color: #f0f0f0;
+    background-color: rgb(240, 240, 240);
     color: black;
 }
 
@@ -139,5 +140,9 @@ nav.large-8.cell.logo-links.hidden-large {
 @media only screen and (max-width: 312px) {
     img.footer-logo {
         max-width: 200px;
+    }
+
+    figcaption.copyright {
+        font-size: 12px;
     }
 }

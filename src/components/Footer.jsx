@@ -17,7 +17,7 @@ const Footer = () => {
     return (
         <footer className="callout large secondary">
 
-            <section className="topFooter grid-container grid-x">
+            {/* <section className="topFooter grid-container grid-x">
 
                 <nav className="large-2 cell adobePortfolio">
                     <a className="adobePortfolioSmall" href="https://tannerdmoore.myportfolio.com" target="_blank" rel="noreferrer" >
@@ -46,7 +46,7 @@ const Footer = () => {
                     </a>
                 </nav>
 
-            </section>
+            </section> */}
 
             <section className="bottomFooter grid-container grid-x">
 
