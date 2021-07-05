@@ -189,7 +189,13 @@ hr.home {
 /* Responsive Design */
 @media only screen and (max-width: 639px) {
     section.profile-pic-home {
+        position: relative;
         background-image: url(../assets/images/other/profilepic-philippines-0015-mobile-home.jpg);
+        height: 100vh;
+        background-attachment: fixed;
+        background-position: right top;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     section.coding-pic-home {
