@@ -168,9 +168,6 @@ const Home = () => {
                 {/* Mobile */}
                 <img id="who-i-am-overlay-mobile" className="profile-overlay-home mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
                 <img id="what-i-do-overlay-mobile" className="profile-overlay-home mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-            </section>
-
-            <section id="profile-pic-home-bottom" className="profile-pic-home">
                 <Link to="/about" id="design-development-overlay" className="who-i-am-overlay desktop">
                     <img className="who-i-am-overlay desktop" src={designDevelopmentDesktop} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
                 </Link>
@@ -180,13 +177,13 @@ const Home = () => {
                 </Link>
             </section>
 
+            {/* <section id="profile-pic-home-bottom" className="profile-pic-home">
+            </section> */}
+
             <section id="coding-pic-home-top" className="coding-pic-home">
                 <img id="what-i-do-portfolio-overlay" className="coding-overlay-home desktop" src={whatIDoPortfolioOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
 
                 <img id="what-i-do-portfolio-overlay-mobile" className="coding-overlay-home mobile" src={whatIDoPortfolioOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-            </section>
-
-            <section id="coding-pic-home-bottom" className="coding-pic-home">
                 <Link to="/portfolio" id="coding-overlay" className="coding-overlay desktop">
                     <img className="coding-overlay desktop" src={webDevelopmentDesktop} alt="Web Design &amp; Development"></img>
                 </Link>
@@ -195,6 +192,9 @@ const Home = () => {
                     <img className="coding-overlay mobile" src={webDevelopmentMobile} alt="Web Design &amp; Development"></img>
                 </Link>
             </section>
+
+            {/* <section id="coding-pic-home-bottom" className="coding-pic-home">
+            </section> */}
 
             {/* <h1 className="hidden-header">Tanner Moore: Who I Am &amp; What I Do.</h1>
 
