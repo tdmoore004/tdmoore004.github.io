@@ -240,7 +240,6 @@ hr.home {
         display: none;
     }
 
-
     a.home-overlay.work, a.home-overlay.connect {
         background-image: linear-gradient(170deg, transparent, transparent, rgb(10, 10, 10));
     }
