@@ -24,7 +24,6 @@ section.profile-pic-about {
     position: sticky;
     top: 0;
     background-image: url(../assets/images/other/profilepic-philippines-0015-home.jpg);
-    background-attachment: fixed;
     background-position: right;
     background-repeat: no-repeat;
     background-size: cover;
