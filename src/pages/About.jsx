@@ -6,10 +6,10 @@ import "./About.css"
 // Importing profile picture.
 import profilePicDesktop from "../assets/images/other/profilepic-philippines-0015-home.jpg";
 import profilePicMobile from "../assets/images/other/profilepic-philippines-0015-mobile-home.jpg";
-import whoIAmOverlay from "../assets/images/other/who-i-am-overlay.png"
-import whoIAmOverlayMobile from "../assets/images/other/who-i-am-home-overlay-mobile.png"
-import whatIDoOverlayMobile from "../assets/images/other/what-i-do-home-overlay-mobile.png"
-import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
+import whoIAmOverlay from "../assets/images/other/who-i-am-what-i-do-overlay.png"
+import whoIAmOverlayMobile from "../assets/images/other/who-i-am-what-i-do-overlay-mobile.png"
+// import whatIDoOverlayMobile from "../assets/images/other/what-i-do-home-overlay-mobile.png"
+// import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
 import creativeHeader from "../assets/images/headers/creative-design-thinker-header.png"
 import developerHeader from "../assets/images/headers/full-stack-web-developer-header.png"
 import mtnLogo from "../assets/images/logos/mtn-logo-white.png"
@@ -57,10 +57,10 @@ const About = () => {
                 <section className="portgolio-bg-main"></section>
 
                 <img id="who-i-am-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
-                <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
+                {/* <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
                 <img id="who-i-am-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                <img id="what-i-do-overlay-mobile" className="what-i-do-overlay mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+                {/* <img id="what-i-do-overlay-mobile" className="what-i-do-overlay mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
                 <img className="profilePic desktop hidden" src={profilePicDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
                 <img className="profilePic mobile hidden" src={profilePicMobile} alt="Tanner Moore–Who I Am" loading="lazy" />

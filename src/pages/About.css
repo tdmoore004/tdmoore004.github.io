@@ -32,9 +32,10 @@ section.profile-pic-about {
 }
 
 img.who-i-am-overlay.desktop, img.what-i-do-overlay.desktop, img.who-i-am-overlay.desktop, img.what-i-do-overlay.desktop {
-    position: fixed;
+    position: sticky;
+    top: 55px;
     z-index: 1;
-    margin-top: 55px;
+    /* margin-top: 55px; */
     opacity: 0.9;
     /* animation: fadein ease 2s;
     animation-iteration-count: 1;
@@ -43,9 +44,10 @@ img.who-i-am-overlay.desktop, img.what-i-do-overlay.desktop, img.who-i-am-overla
 
 img.who-i-am-overlay.mobile, img.what-i-do-overlay.mobile {
     display: none;
-    position: fixed;
+    position: sticky;
+    top: 55px;
     z-index: 1;
-    margin-top: 55px;
+    /* margin-top: 55px; */
     opacity: 0.9;
     /* animation: fadein ease 2s;
     animation-iteration-count: 1;
