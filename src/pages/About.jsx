@@ -20,34 +20,34 @@ const About = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        window.addEventListener("scroll", handleOverlayTransition);
-        return () => {
-            window.removeEventListener("scroll", handleOverlayTransition);
-        };
+        // window.addEventListener("scroll", handleOverlayTransition);
+        // return () => {
+        //     window.removeEventListener("scroll", handleOverlayTransition);
+        // };
     });
 
-    let handleOverlayTransition = () => {
+    // let handleOverlayTransition = () => {
 
-        let whoIAmSectionHeightFourth = document.getElementById("profile-pic-about").scrollHeight / 4;
+    //     let whoIAmSectionHeightFourth = document.getElementById("profile-pic-about").scrollHeight / 4;
 
-        // Fading in and out about "Who I Am" heading
-        if (window.scrollY < whoIAmSectionHeightFourth) {
-            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9;
-            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9;
-            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9;
-            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9;
-        } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 3)) {
-            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-        } else if (window.scrollY > (whoIAmSectionHeightFourth * 3)) {
-            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0;
-            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0;
-            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0;
-            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0;
-        }
-    }
+    //     // Fading in and out about "Who I Am" heading
+    //     if (window.scrollY < whoIAmSectionHeightFourth) {
+    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9;
+    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9;
+    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9;
+    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9;
+    //     } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 3)) {
+    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //     } else if (window.scrollY > (whoIAmSectionHeightFourth * 3)) {
+    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0;
+    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0;
+    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0;
+    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0;
+    //     }
+    // }
 
     return (
         <main>
