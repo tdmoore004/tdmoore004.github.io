@@ -7,7 +7,7 @@ import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx"
 
 // Importing page components for routing.
-import Home from "./pages/Home.jsx"
+// import Home from "./pages/Home.jsx"
 import About from "./pages/About.jsx"
 import Portfolio from "./pages/Portfolio.jsx"
 import ProjectPage from "./pages/ProjectPage.jsx"

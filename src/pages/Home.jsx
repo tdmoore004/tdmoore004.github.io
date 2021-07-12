@@ -1,20 +1,20 @@
-import React, { useEffect } from "react";
+import React, {  } from "react";
 import { Link } from "react-router-dom";
 
 // Importing style sheet for page.
 import "./Home.css";
 
 // Importing images for home page.
-import profilePicMobile from "../assets/images/other/profilepic-philippines-0015-mobile-home.jpg";
-import whoIAmOverlayDesktop from "../assets/images/other/who-i-am-home-overlay.png"
-import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
-import whatIDoPortfolioOverlayDesktop from "../assets/images/other/what-i-do-home-overlay-portfolio.png"
+// import profilePicMobile from "../assets/images/other/profilepic-philippines-0015-mobile-home.jpg";
+// import whoIAmOverlayDesktop from "../assets/images/other/who-i-am-home-overlay.png"
+// import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
+// import whatIDoPortfolioOverlayDesktop from "../assets/images/other/what-i-do-home-overlay-portfolio.png"
 import whoIAmOverlayMobile from "../assets/images/other/who-i-am-home-overlay-mobile.png"
 import whatIDoOverlayMobile from "../assets/images/other/what-i-do-home-overlay-mobile.png"
 import whatIDoPortfolioOverlayMobile from "../assets/images/other/what-i-do-home-overlay-portfolio-mobile.png"
-import designDevelopmentDesktop from "../assets/images/other/creative-design-thinker-full-stack-web-developer.png"
+// import designDevelopmentDesktop from "../assets/images/other/creative-design-thinker-full-stack-web-developer.png"
 import designDevelopmentMobile from "../assets/images/other/creative-design-thinker-full-stack-web-developer-mobile.png"
-import webDevelopmentDesktop from "../assets/images/other/web-design-and-development-desktop.png"
+// import webDevelopmentDesktop from "../assets/images/other/web-design-and-development-desktop.png"
 import webDevelopmentMobile from "../assets/images/other/web-design-and-development-mobile.png"
 
 // Constant for rendering About page content.
