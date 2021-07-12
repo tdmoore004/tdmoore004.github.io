@@ -32,20 +32,14 @@ const About = () => {
 
     //     // Fading in and out about "Who I Am" heading
     //     if (window.scrollY < whoIAmSectionHeightFourth) {
-    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9;
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9;
-    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9;
-    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9;
+    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0.9;
+    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0.9;
     //     } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 3)) {
-    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
     //     } else if (window.scrollY > (whoIAmSectionHeightFourth * 3)) {
-    //         document.getElementById("who-i-am-overlay-desktop").style.opacity = 0;
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0;
-    //         document.getElementById("what-i-do-overlay-desktop").style.opacity = 0;
-    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0;
+    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0;
+    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0;
     //     }
     // }
 
@@ -58,10 +52,10 @@ const About = () => {
 
                 <section className="portfolio-overlay">
 
-                    <img id="who-i-am-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
+                    <img id="who-i-am-what-i-do-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
                     {/* <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
-                    <img id="who-i-am-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+                    <img id="who-i-am-what-i-do-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
                     {/* <img id="what-i-do-overlay-mobile" className="what-i-do-overlay mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
                 </section>
