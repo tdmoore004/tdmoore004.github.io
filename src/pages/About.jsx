@@ -8,6 +8,8 @@ import profilePicDesktop from "../assets/images/other/profilepic-philippines-001
 import profilePicMobile from "../assets/images/other/profilepic-philippines-0015-mobile-home.jpg";
 import whoIAmOverlay from "../assets/images/other/who-i-am-overlay.png"
 import whoIAmOverlayMobile from "../assets/images/other/who-i-am-home-overlay-mobile.png"
+import whatIDoOverlayMobile from "../assets/images/other/what-i-do-home-overlay-mobile.png"
+import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
 import creativeHeader from "../assets/images/headers/creative-design-thinker-header.png"
 import developerHeader from "../assets/images/headers/full-stack-web-developer-header.png"
 import mtnLogo from "../assets/images/logos/mtn-logo-white.png"
@@ -21,30 +23,29 @@ const About = () => {
         window.addEventListener("scroll", handleOverlayTransition);
         return () => {
             window.removeEventListener("scroll", handleOverlayTransition);
-          };
+        };
     });
 
     let handleOverlayTransition = () => {
 
-        let whoIAmSectionHeightThird = document.getElementById("profile-pic-about").scrollHeight / 3;
         let whoIAmSectionHeightFourth = document.getElementById("profile-pic-about").scrollHeight / 4;
-
-        // console.log(window.scrollY);
-        // console.log(whoIAmSectionHeightThird);
-        // console.log(whoIAmSectionHeightHalf);
-        // console.log(whoIAmSectionHeightFourth);
-        
 
         // Fading in and out about "Who I Am" heading
         if (window.scrollY < whoIAmSectionHeightFourth) {
-            document.getElementById("about-me-overlay-desktop").style.opacity = 0.9;
-            document.getElementById("about-me-overlay-mobile").style.opacity = 0.9;
-        } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < whoIAmSectionHeightThird) {
-            document.getElementById("about-me-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / (whoIAmSectionHeightThird - whoIAmSectionHeightFourth));
-            document.getElementById("about-me-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / (whoIAmSectionHeightThird - whoIAmSectionHeightFourth));
-        } else if (window.scrollY > whoIAmSectionHeightThird) {
-            document.getElementById("about-me-overlay-desktop").style.opacity = 0;
-            document.getElementById("about-me-overlay-mobile").style.opacity = 0;
+            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9;
+            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9;
+            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9;
+            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9;
+        } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 3)) {
+            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
+        } else if (window.scrollY > (whoIAmSectionHeightFourth * 3)) {
+            document.getElementById("who-i-am-overlay-desktop").style.opacity = 0;
+            document.getElementById("who-i-am-overlay-mobile").style.opacity = 0;
+            document.getElementById("what-i-do-overlay-desktop").style.opacity = 0;
+            document.getElementById("what-i-do-overlay-mobile").style.opacity = 0;
         }
     }
 
@@ -52,73 +53,71 @@ const About = () => {
         <main>
 
             <section id="profile-pic-about" className="profile-pic-about">
-                <img id="about-me-overlay-desktop" className="profile-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
-                <img id="about-me-overlay-mobile" className="profile-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+
+                <section className="portgolio-bg-main"></section>
+
+                <img id="who-i-am-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
+                <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
+
+                <img id="who-i-am-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+                <img id="what-i-do-overlay-mobile" className="what-i-do-overlay mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+
                 <img className="profilePic desktop hidden" src={profilePicDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-
                 <img className="profilePic mobile hidden" src={profilePicMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+
                 <h1 className="hidden-header">Who I Am</h1>
 
-                <section className="card grid-container grid-x align-center about">
+            </section>
 
-                    <section className="card-section">
+            <section className="card grid-container grid-x align-center about">
 
-                        <section className="grid-x headline">
+                <section className="card-section">
 
-                            <h2 className="hidden-header">Creative Design Thinker</h2>
+                    <section className="grid-x headline">
 
-                            {/* Design Headline. */}
-                            <section className="cell medium-8">
-                                <img className="about-header" src={creativeHeader} alt="Creative Design Thinker" loading="lazy" />
-                                <p className="card-section aboutMe design">
-                                    Capable of designing a professional, cutting edge website with a clean and friendly user experience and interface that will attract and inform your clients, no matter the products or services that you offer, through design processes, practices and principles.
+                        <h2 className="hidden-header">Creative Design Thinker</h2>
+
+                        {/* Design Headline. */}
+                        <section className="cell medium-8">
+                            <img className="about-header" src={creativeHeader} alt="Creative Design Thinker" loading="lazy" />
+                            <p className="card-section aboutMe design">
+                                Capable of designing a professional, cutting edge website with a clean and friendly user experience and interface that will attract and inform your clients, no matter the products or services that you offer, through design processes, practices and principles.
                             </p>
-                            </section>
-
-                            <section className="cell medium-4 mtnLogo">
-                                <img className="mtnLogo" src={mtnLogo} alt="Mountain Logo" loading="lazy" />
-                            </section>
-
                         </section>
 
-                        <section className="grid-x headline">
-
-                            <section className="cell medium-4 codingLanguages top">
-                                <img className="codingLanguagesTop" src={codingLanguagesMobile} alt="Coding Languages" loading="lazy" />
-                            </section>
-
-                            <h2 className="hidden-header">Full-Stack Web Developer</h2>
-
-                            {/* Develop Headline. */}
-                            <section className="cell medium-8">
-                                <img className="about-header" src={developerHeader} alt="Web Development" loading="lazy" />
-                                <p className="card-section aboutMe develop">
-                                    Experienced with development languages, frameworks, and technologies such as HTML, CSS, JavaScript, React, Foundation CSS, Express.js, Mongoose, Sequelize, and more with the ability to implement designs and develop a polished and responsive website.
-                            </p>
-                            </section>
-
-                            <section className="cell medium-4 codingLanguages bottom">
-                                <img className="codingLanguagesBottom" src={codingLanguagesMobile} alt="Coding Languages" loading="lazy" />
-                            </section>
-
+                        <section className="cell medium-4 mtnLogo">
+                            <img className="mtnLogo" src={mtnLogo} alt="Mountain Logo" loading="lazy" />
                         </section>
-
-                        <p className="aboutMe">Working my way through college, I earned a Bachelor of Science in communication, with a minor in multi-disciplinary design from the University of Utah, later returning for a certificate in full-stack web development. I believe that my passion for, and experience with design, digital media and web development make me a valuable asset in a variety of areas.</p>
 
                     </section>
 
+                    <section className="grid-x headline">
+
+                        <section className="cell medium-4 codingLanguages top">
+                            <img className="codingLanguagesTop" src={codingLanguagesMobile} alt="Coding Languages" loading="lazy" />
+                        </section>
+
+                        <h2 className="hidden-header">Full-Stack Web Developer</h2>
+
+                        {/* Develop Headline. */}
+                        <section className="cell medium-8">
+                            <img className="about-header" src={developerHeader} alt="Web Development" loading="lazy" />
+                            <p className="card-section aboutMe develop">
+                                Experienced with development languages, frameworks, and technologies such as HTML, CSS, JavaScript, React, Foundation CSS, Express.js, Mongoose, Sequelize, and more with the ability to implement designs and develop a polished and responsive website.
+                            </p>
+                        </section>
+
+                        <section className="cell medium-4 codingLanguages bottom">
+                            <img className="codingLanguagesBottom" src={codingLanguagesMobile} alt="Coding Languages" loading="lazy" />
+                        </section>
+
+                    </section>
+
+                    <p className="aboutMe">Working my way through college, I earned a Bachelor of Science in communication, with a minor in multi-disciplinary design from the University of Utah, later returning for a certificate in full-stack web development. I believe that my passion for, and experience with design, digital media and web development make me a valuable asset in a variety of areas.</p>
+
                 </section>
+
             </section>
-
-            {/* Profile pictures (desktop and mobile) */}
-            {/* <img className="profilePic desktop fixed" src={profilePicDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-            <img className="profilePic mobile fixed" src={profilePicMobile} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
-
-            {/* Hidden profile pictures for correct spacing */}
-            {/* <img className="profilePic desktop hidden" src={profilePicDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-            <img className="profilePic mobile hidden" src={profilePicMobile} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
-
 
         </main>
     )
