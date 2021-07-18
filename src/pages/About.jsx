@@ -20,28 +20,28 @@ const About = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        // window.addEventListener("scroll", handleOverlayTransition);
-        // return () => {
-        //     window.removeEventListener("scroll", handleOverlayTransition);
-        // };
+        window.addEventListener("scroll", handleOverlayTransition);
+        return () => {
+            window.removeEventListener("scroll", handleOverlayTransition);
+        };
     });
 
-    // let handleOverlayTransition = () => {
+    let handleOverlayTransition = () => {
 
-    //     let whoIAmSectionHeightFourth = document.getElementById("profile-pic-about").scrollHeight / 4;
+        let whoIAmSectionHeightFourth = document.getElementById("profile-pic-about").scrollHeight / 4;
 
-    //     // Fading in and out about "Who I Am" heading
-    //     if (window.scrollY < whoIAmSectionHeightFourth) {
-    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0.9;
-    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0.9;
-    //     } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 3)) {
-    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 3) - whoIAmSectionHeightFourth));
-    //     } else if (window.scrollY > (whoIAmSectionHeightFourth * 3)) {
-    //         document.getElementById("who-i-am-what-i-do-overlay-desktop").style.opacity = 0;
-    //         document.getElementById("who-i-am-what-i-do-overlay-mobile").style.opacity = 0;
-    //     }
-    // }
+        // Fading in and out about "Who I Am" heading
+        if (window.scrollY < whoIAmSectionHeightFourth) {
+            document.getElementById("portfolio-overlay").style.opacity = 1;
+            document.getElementById("portfolio-overlay").style.opacity = 1;
+        } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 2)) {
+            document.getElementById("portfolio-overlay").style.opacity = 1 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 2) - whoIAmSectionHeightFourth));
+            document.getElementById("portfolio-overlay").style.opacity = 1 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 2) - whoIAmSectionHeightFourth));
+        } else if (window.scrollY > (whoIAmSectionHeightFourth * 2)) {
+            document.getElementById("portfolio-overlay").style.opacity = 0;
+            document.getElementById("portfolio-overlay").style.opacity = 0;
+        }
+    }
 
     return (
         <main>
@@ -50,7 +50,7 @@ const About = () => {
 
                 <section className="portgolio-bg-main"></section>
 
-                <section className="portfolio-overlay">
+                <section id="portfolio-overlay" className="portfolio-overlay">
 
                     <img id="who-i-am-what-i-do-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
                     {/* <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
