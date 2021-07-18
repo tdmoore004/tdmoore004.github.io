@@ -20,7 +20,7 @@ function App() {
         <Header/>
           <Switch>
             <Route exact path="/" component={About}/>
-            {/* <Route exact path="/about" component={About}/> */}
+            <Route exact path="/about" component={About}/>
             <Route exact path="/portfolio" component={Portfolio}/>
             <Route exact path={["/portfolio/traveler", "/portfolio/furlodge", "/portfolio/boredom-buster", "/portfolio/devour-da-burger", "/portfolio/budget-tracker", "/portfolio/fitness-tracker"]} component={ProjectPage}/>
             <Route exact path="/contact" component={Contact}/>
