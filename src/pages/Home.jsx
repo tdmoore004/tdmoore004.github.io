@@ -1,4 +1,4 @@
-import React, {  } from "react";
+import React, { } from "react";
 import { Link } from "react-router-dom";
 
 // Importing style sheet for page.
@@ -9,8 +9,8 @@ import "./Home.css";
 // import whoIAmOverlayDesktop from "../assets/images/other/who-i-am-home-overlay.png"
 // import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
 // import whatIDoPortfolioOverlayDesktop from "../assets/images/other/what-i-do-home-overlay-portfolio.png"
-import whoIAmOverlayMobile from "../assets/images/other/who-i-am-home-overlay-mobile.png"
-import whatIDoOverlayMobile from "../assets/images/other/what-i-do-home-overlay-mobile.png"
+import whoIAmOverlay from "../assets/images/other/who-i-am-what-i-do-overlay.png"
+import whoIAmOverlayMobile from "../assets/images/other/who-i-am-what-i-do-overlay-mobile.png"
 import whatIDoPortfolioOverlayMobile from "../assets/images/other/what-i-do-home-overlay-portfolio-mobile.png"
 // import designDevelopmentDesktop from "../assets/images/other/creative-design-thinker-full-stack-web-developer.png"
 import designDevelopmentMobile from "../assets/images/other/creative-design-thinker-full-stack-web-developer-mobile.png"
@@ -140,7 +140,7 @@ const Home = () => {
     // //         document.getElementById("coding-overlay").style.zIndex = -1;
     // //         document.getElementById("coding-overlay-mobile").style.zIndex = -1;
     // //     }
-        
+
     // // };
 
     // // let handleBackgroundPosition = () => {
@@ -179,12 +179,13 @@ const Home = () => {
             <section id="about-container" className="sticky-container-about">
 
                 <section className="bg-main-about"></section>
-                
-                <section className="about-heading-parent-mobile">
-                    
-                    <img id="who-i-am-overlay-mobile" className="profile-overlay-home mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                    <img id="what-i-do-overlay-mobile" className="profile-overlay-home mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                
+
+                <section className="about-heading-overlay">
+
+                    <img id="who-i-am-what-i-do-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
+
+                    <img id="who-i-am-what-i-do-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
+
                 </section>
 
                 <section className="about-link-parent-mobile">
@@ -194,17 +195,17 @@ const Home = () => {
                     </Link>
 
                 </section>
-            
+
             </section>
 
             <section id="portfolio-container" className="sticky-container-portfolio">
 
                 <section className="bg-main-portfolio"></section>
-                
+
                 <section className="portfolio-heading-parent-mobile">
-                    
+
                     <img id="what-i-do-portfolio-overlay-mobile" className="coding-overlay-home mobile" src={whatIDoPortfolioOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                
+
                 </section>
 
                 <section className="about-link-parent-mobile">
@@ -214,7 +215,7 @@ const Home = () => {
                     </Link>
 
                 </section>
-            
+
             </section>
 
             {/* Heading overlay, "Who I am & What I do"

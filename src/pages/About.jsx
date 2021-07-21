@@ -53,10 +53,8 @@ const About = () => {
                 <section id="portfolio-overlay" className="portfolio-overlay">
 
                     <img id="who-i-am-what-i-do-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
-                    {/* <img id="what-i-do-overlay-desktop" className="what-i-do-overlay desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
                     <img id="who-i-am-what-i-do-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                    {/* <img id="what-i-do-overlay-mobile" className="what-i-do-overlay mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" /> */}
 
                 </section>
 
