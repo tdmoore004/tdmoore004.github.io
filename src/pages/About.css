@@ -140,13 +140,13 @@ img.about-check {
 section.cell.medium-4.mtnLogo {
     margin: auto;
     opacity: .9;
-    padding: 0 10px;
+    padding: 0 30px 0 0;
 }
 
 section.cell.medium-4.codingLanguages.top {
     margin: auto;
     opacity: .9;
-    padding: 0 10px;
+    padding: 0 30px 0 0;
 }
 
 section.cell.medium-6.codingLanguages.bottom {
@@ -156,7 +156,6 @@ section.cell.medium-6.codingLanguages.bottom {
 img.codingLanguagesBottom {
     display: none;
     opacity: .9;
-    padding: 0 10px;
 }
 
 /* Responsive Design */
@@ -214,5 +213,9 @@ img.codingLanguagesBottom {
     ul.card-section.aboutMe, ul.aboutMe {
         font-size: 16px;
         padding: 10px 10px 20px;
+    }
+
+    section.cell.medium-4.mtnLogo {
+        padding: 0 0 0 0;
     }
 }
