@@ -35,8 +35,9 @@ nav.title-bar, nav.top-bar-right {
 }
 
 a.social-dropdown, a {
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
     color: rgb(225, 225, 225);
 }
 
@@ -74,6 +75,15 @@ li.is-submenu-item.is-dropdown-submenu-item a:hover {
 }
 
 /* Media query for responsive navbar */
+@media only screen and (max-width: 700px) {
+    .top-bar .top-bar-left {
+        max-width: 300px;
+    }
+    img#logo {
+        max-width: 225px;
+    }
+}
+
 @media only screen and (max-width: 639px) {
     .top-bar, .top-bar ul {
         background: rgb(15, 15, 15, .75);
@@ -91,12 +101,6 @@ li.is-submenu-item.is-dropdown-submenu-item a:hover {
     a.dropdown-menu-item {
         float: right;
         /* margin-right: 5px; */
-    }
-    .top-bar .top-bar-left {
-        max-width: 300px;
-    }
-    img#logo {
-        max-width: 225px;
     }
 }
 

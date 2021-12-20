@@ -91,11 +91,15 @@ h3.card-divider.about {
 }
 
 img.about-header {
-    padding: 0px 0px 0px 5px;
+    padding: 0 0 10px;
+}
+
+img.about-header-mobile {
+    display: none;
 }
 
 section.grid-x.headline {
-    padding: 10px 0 20px;
+    padding: 0 0 25px;
 }
 
 /* About Me Content */
@@ -103,29 +107,46 @@ section.card-section {
     padding: 10px 20px 20px;
     margin: auto;
     max-width: 1200px;
-    font-size: 17px;
+    font-size: 18px;
     color: rgb(225, 225, 225);
     z-index: 2;
 }
 
-p.card-section.aboutMe, p.aboutMe {
+section.cell.medium-8 {
+    padding: 25px 0 0;
+}
+
+ul.card-section.aboutMe, ul.aboutMe {
     margin: 0;
     padding: 10px 10px 10px;
     max-width: 1200px;
-    font-size: 17px;
+    font-size: 18px;
     z-index: 2;
     color: rgb(225, 225, 225);
+}
+
+p.aboutMe-bullet {
+    margin: 0 0 5px;
+    padding: 0 0 0 35px;
+}
+
+img.about-check {
+    float: left;
+    height: 16px;
+    margin: 2px 10px;
 }
 
 /* Logos */
 section.cell.medium-4.mtnLogo {
     margin: auto;
     opacity: .9;
+    padding: 0 10px;
 }
 
 section.cell.medium-4.codingLanguages.top {
     margin: auto;
     opacity: .9;
+    padding: 0 10px;
 }
 
 section.cell.medium-6.codingLanguages.bottom {
@@ -135,6 +156,7 @@ section.cell.medium-6.codingLanguages.bottom {
 img.codingLanguagesBottom {
     display: none;
     opacity: .9;
+    padding: 0 10px;
 }
 
 /* Responsive Design */
@@ -170,6 +192,15 @@ img.codingLanguagesBottom {
         background-image: linear-gradient(170deg, rgb(255, 255, 255), rgb(255, 255, 255, .95), rgb(255, 255, 255, .85), rgb(255, 255, 255, .75), rgb(255, 255, 255, .65), rgb(255, 255, 255, .55), rgb(255, 255, 255, .5), rgb(255, 255, 255, .0) 80%);;
     }
 
+    img.about-header {
+        display: none;
+    }
+    
+    img.about-header-mobile {
+        display: block;
+        padding: 0 0 10px;
+    }
+
     section.card-section {
         padding: 0;
     }
@@ -180,8 +211,8 @@ img.codingLanguagesBottom {
         margin: 0px;
     }
 
-    p.card-section.aboutMe, p.aboutMe {
-        font-size: 15px;
+    ul.card-section.aboutMe, ul.aboutMe {
+        font-size: 16px;
         padding: 10px 10px 20px;
     }
 }
