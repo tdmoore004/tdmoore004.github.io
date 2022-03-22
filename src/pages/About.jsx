@@ -59,7 +59,7 @@ const About = () => {
                             <img className="intro-header" src={DevelopHeader} alt="Developer." />
                             <p>With experience and understanding of full-stack web development I can work on customization and management in site builders, such as WordPress or Unbounce, or work on general building and developement.</p>
                         </p>
-                        <a href="#explore-moore"><img className="explore-moore" src={exploreMoore} alt="Explore Moore..." /></a>
+                        {/* <a href="#explore-moore"><img className="explore-moore" src={exploreMoore} alt="Explore Moore..." /></a> */}
                     </section>
 
                 </section>

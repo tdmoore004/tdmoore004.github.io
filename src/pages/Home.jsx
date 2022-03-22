@@ -8,8 +8,8 @@ import "./Home.css"
 import introHeader from "../assets/images/headers/main-header-who-i-am.png"
 import introHeaderMobile from "../assets/images/headers/main-header-who-i-am-mobile-1.png"
 import exploreMoore from "../assets/images/headers/explore-moore.png"
-import jobTitle from "../assets/images/headers/position.png"
-import companyName from "../assets/images/headers/company.png"
+// import jobTitle from "../assets/images/headers/position.png"
+// import companyName from "../assets/images/headers/company.png"
 
 // Importing for description section.
 import uxDesignHeader from "../assets/images/headers/ux-design-header.png"
@@ -70,16 +70,16 @@ const Home = () => {
 
                 <section id="portfolio-overlay-home" className="portfolio-overlay">
 
-                    <section className="intro-overlay">
-                        <img className="intro-heading" src={introHeader} alt="Designer. Optimizer. Developer." />
+                    <section className="intro-overlay-home">
+                        <img className="intro-heading-home" src={introHeader} alt="Designer. Optimizer. Developer." />
                         <img className="intro-heading-mobile" src={introHeaderMobile} alt="Designer. Optimizer. Developer." />
-                        <p className="intro-paragraph">Hacking at and creating top notch user experiences that elevate conversion rate.</p>
-                        <p className="intro-paragraph">
+                        <p className="intro-paragraph-home">Hacking away at and creating top notch user experiences that elevate conversion rate.</p>
+                        {/* <p className="intro-paragraph-home">
                             <img className="job-title" src={jobTitle} alt="UX/CRO Specialist"/>
                             on the team at&nbsp;
                             <img className="company-name" src={companyName} alt="Chamber Media"/>
-                        </p>
-                        <p className="intro-paragraph">Simple man trying to make his way in the world.</p>
+                        </p> */}
+                        <p className="intro-paragraph-home">Just a simple man trying to make his way in the world.</p>
                         <Link to="#explore-moore">
                             <img className="explore-moore" src={exploreMoore} alt="Explore Moore..." />
                         </Link>
