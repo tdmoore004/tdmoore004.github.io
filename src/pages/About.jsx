@@ -7,7 +7,7 @@ import "./About.css"
 import DesignHeader from "../assets/images/headers/design-header.png"
 import OptimizeHeader from "../assets/images/headers/optimize-header.png"
 import DevelopHeader from "../assets/images/headers/develop-header.png"
-import exploreMoore from "../assets/images/headers/explore-moore.png"
+// import exploreMoore from "../assets/images/headers/explore-moore.png"
 
 // Constant for rendering About page content.
 const About = () => {
