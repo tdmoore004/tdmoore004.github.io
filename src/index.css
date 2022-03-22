@@ -1,6 +1,6 @@
 /* Page styles */
 body {
-    min-height: 100vh;
+    min-height: calc(100vh - 55px);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 16px;
     padding: 0 0 107px;

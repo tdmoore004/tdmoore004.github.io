@@ -6,8 +6,8 @@ footer.large.callout.secondary {
     width: 100%;
     margin: 0;
     padding: 25px 25px;
-    background-color: rgb(240, 240, 240);
-    color: black;
+    background-color: rgb(25, 25, 25);
+    color: #fafafa;
 }
 
 section.topFooter.grid-container.grid-x, section.bottomFooter.grid-container.grid-x {
@@ -24,31 +24,32 @@ nav.large-2.cell.adobePortfolio {
 
 a.adobePortfolio, a.adobePortfolioSmall {
     padding: 0 25px 0 0;
-    color: black;
+    color: #fafafa;
     font-size: 16px;
     font-weight: 550;
 }
 
 a.educationPortfolio, a.professionalPortfolio, a.studioPortfolio {
     padding: 0 25px;
-    color: black;
+    color: #fafafa;
     font-size: 14px;
 }
 
 a.resumeLink {
     padding: 0 10px 0 0;
-    color: black;
+    color: #fafafa;
     font-size: 16px;
     font-weight: 550;
     float: right;
 }
 
 a.adobePortfolio:hover, a.educationPortfolio:hover, a.professionalPortfolio:hover, a.studioPortfolio:hover, a.resumeLink:hover {
-    color: #356b8f;
+    color: #71b2e4;
 }
 
 img.footer-logo {
     max-width: 275px;
+    opacity: .9;
 }
 
 figcaption.copyright {
@@ -75,11 +76,11 @@ nav.large-8.cell.logo-links.hidden-large {
     font-size: 25px;
     vertical-align: middle;
     margin: 5px 10px;
-    color: black;
+    color: #fafafa;
 }
 
 .fab.fa-linkedin-in:hover, .fab.fa-github:hover, .fab.fa-instagram:hover {
-    color: #356b8f;
+    color: #71b2e4;
 }
 
 @media only screen and (max-width: 1023px) {

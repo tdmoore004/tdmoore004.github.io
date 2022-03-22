@@ -46,8 +46,16 @@ const Header = () => {
                 {/* Navbar menu */}
                 <nav className="top-bar-right" id="nav-menu" data-responsive-toggle="nav-menu">
                     <ul className="dropdown vertical medium-horizontal menu" data-responsive-menu="accordion medium-dropdown">
+                        <li><Link to="/" className="dropdown-menu-item" data-toggle="nav-menu">HOME</Link></li>
                         <li><Link to="/about" className="dropdown-menu-item" data-toggle="nav-menu">ABOUT</Link></li>
-                        <li><Link to="/portfolio" className="dropdown-menu-item" data-toggle="nav-menu">PORTFOLIO</Link></li>
+                        <li>
+                            <Link className="work-dropdown dropdown-menu-item" data-toggle="nav-menu">WORK</Link>
+                            <ul className="nested vertical menu">
+                                <li><Link to="/portfolio/design">DESIGN</Link></li>
+                                <li><Link to="/portfolio/optimize">OPTIMIZE</Link></li>
+                                <li><Link to="/portfolio/develop">DEVELOP</Link></li>
+                            </ul>
+                        </li>
                         <li><Link to="/contact" className="dropdown-menu-item" data-toggle="nav-menu">CONTACT</Link></li>
                     </ul>
                 </nav>

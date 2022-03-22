@@ -1,13 +1,14 @@
 /* Page styles */
 body {
-    background-color: rgba(15, 15, 15);
+    background-color: rgba(25, 25, 25);
 }
 
 /* Project page styles */
 main.card.grid-container.grid-x.align-center.project {
-    background-color: rgb(15, 15, 15, 0.9);
+    background-color: rgb(25, 25, 25, 0.9);
     padding: 5px 0 0;
     margin-top: 55px;
+    margin-bottom: 0;
     border: none;
     max-width: 1200px;
 }
@@ -37,7 +38,7 @@ div.cell.medium-6.button-group.align-right.app-links a.button:hover {
 }
 
 section.card.project {
-    background-color: rgb(15, 15, 15, 0.9);
+    background-color: rgb(25, 25, 25, 0.9);
     border: none;
     margin: 0 15px 15px;
     max-width: 100%;

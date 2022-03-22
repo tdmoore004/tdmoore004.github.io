@@ -1,294 +1,270 @@
-import React, { } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Importing style sheet for page.
-import "./Home.css";
+import "./Home.css"
 
-// Importing images for home page.
-// import profilePicMobile from "../assets/images/other/profilepic-philippines-0015-mobile-home.jpg";
-// import whoIAmOverlayDesktop from "../assets/images/other/who-i-am-home-overlay.png"
-// import whatIDoOverlayDesktop from "../assets/images/other/what-i-do-home-overlay.png"
-// import whatIDoPortfolioOverlayDesktop from "../assets/images/other/what-i-do-home-overlay-portfolio.png"
-import whoIAmOverlay from "../assets/images/other/who-i-am-what-i-do-overlay.png"
-import whoIAmOverlayMobile from "../assets/images/other/who-i-am-what-i-do-overlay-mobile.png"
-import whatIDoPortfolioOverlayMobile from "../assets/images/other/what-i-do-home-overlay-portfolio-mobile.png"
-// import designDevelopmentDesktop from "../assets/images/other/creative-design-thinker-full-stack-web-developer.png"
-import designDevelopmentMobile from "../assets/images/other/creative-design-thinker-full-stack-web-developer-mobile.png"
-// import webDevelopmentDesktop from "../assets/images/other/web-design-and-development-desktop.png"
-import webDevelopmentMobile from "../assets/images/other/web-design-and-development-mobile.png"
+// Importing headers for intro paragraph.
+import introHeader from "../assets/images/headers/main-header-who-i-am.png"
+import introHeaderMobile from "../assets/images/headers/main-header-who-i-am-mobile-1.png"
+import exploreMoore from "../assets/images/headers/explore-moore.png"
+import jobTitle from "../assets/images/headers/position.png"
+import companyName from "../assets/images/headers/company.png"
+
+// Importing for description section.
+import uxDesignHeader from "../assets/images/headers/ux-design-header.png"
+import croHeader from "../assets/images/headers/cro-header.png"
+import developerHeader from "../assets/images/headers/full-stack-web-developer-header.png"
+import uxDesignHeaderMobile from "../assets/images/headers/ux-design-header-mobile.png"
+import croHeaderMobile from "../assets/images/headers/cro-header-mobile.png"
+import developerHeaderMobile from "../assets/images/headers/full-stack-web-developer-header-mobile.png"
+import exploreMooreSection from "../assets/images/headers/explore-moore-sections.png"
+import checkMark from "../assets/images/other/check.png"
+
+// Importing Project Teaser component and necessary resources.
+import ProjectTeaserHome from "../components/ProjectTeaserHome.jsx"
+import BusinessQuestHeader from "../assets/images/headers/ultimate-business-quest-header.png"
+import BusinessQuestGif from "../assets/images/project-screenshots/ultimate-business-quest-screenshot.jpg"
+import BusinessQuestGifMobile from "../assets/images/project-screenshots/ultimate-business-quest-screenshot-mobile.jpg"
+import UrinariXHeader from "../assets/images/headers/life-seasons-urinari-x-header.png"
+import UrinariXGif from "../assets/images/project-screenshots/life-seasons-urinari-x-screenshot.jpg"
+import UrinariXGifMobile from "../assets/images/project-screenshots/life-seasons-urinari-x-screenshot-mobile.jpg"
+import TravelerHeader from "../assets/images/headers/traveler-header.png"
+import TravelerGif from "../assets/images/project-screenshots/traveler-screenshot.jpg"
+import TravelerGifMobile from "../assets/images/project-screenshots/traveler-screenshot-mobile.jpg"
 
 // Constant for rendering About page content.
 const Home = () => {
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0);
-    //     window.addEventListener("scroll", handleOverlayTransition);
-    //     // window.addEventListener("scroll", handleBackgroundPosition);
-    //     // document.getElementById("design-development-overlay").addEventListener("mouseover", aboutLinkMouseOver);
-    //     // document.getElementById("coding-overlay").addEventListener("mouseover", portfolioLinkMouseOver);
-    //     // document.getElementById("design-development-overlay").addEventListener("mouseout", aboutLinkMouseOut);
-    //     // document.getElementById("coding-overlay").addEventListener("mouseout", portfolioLinkMouseOut);
-    //     return () => {
-    //         window.removeEventListener("scroll", handleOverlayTransition);
-    //       };
-    // });
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        window.addEventListener("scroll", handleOverlayTransition);
+        return () => {
+            window.removeEventListener("scroll", handleOverlayTransition);
+        };
+    });
 
-    // Function for fading in and out overlay components.
-    // let handleOverlayTransition = () => {
+    let handleOverlayTransition = () => {
 
-    //     let aboutSectionHeight = document.getElementById("about-container").scrollHeight;
-    //     let aboutSectionFourth = (document.getElementById("about-container").scrollHeight / 4);
-    //     let codingSectionHeight = document.getElementById("portfolio-container").scrollHeight;
-    //     let codingSectionFourth = (document.getElementById("portfolio-container").scrollHeight / 4);
+        let whoIAmSectionHeightFourth = document.getElementById("profile-pic-home").scrollHeight / 6;
 
-    //     console.log(aboutSectionHeight);
-    //     console.log(aboutSectionFourth);
-
-    //     // console.log(window.scrollY);
-    //     // console.log(aboutSectionFourth);
-    //     // console.log(aboutSectionHeight);
-    //     // console.log(codingSectionFourth);
-    //     // console.log(codingSectionHeight);
-
-    //     // Fading in and out about "Who I Am" heading
-    //     if (window.scrollY < (aboutSectionHeight +(codingSectionFourth * 2))) {
-    //         // document.getElementById("who-i-am-overlay").style.opacity = 0.9;
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9;
-    //     } else if (window.scrollY > (aboutSectionHeight + (codingSectionFourth * 2)) && window.scrollY < (aboutSectionHeight + (codingSectionFourth * 3))) {
-    //         // document.getElementById("who-i-am-overlay").style.opacity = 0.9 - ((window.scrollY - (aboutSectionHeight + (codingSectionFourth * 2))) / aboutSectionFourth);
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0.9 - ((window.scrollY - (aboutSectionHeight + (codingSectionFourth * 2))) / aboutSectionFourth);
-    //     } else if (window.scrollY > (aboutSectionHeight + (codingSectionFourth * 3))) {
-    //         // document.getElementById("who-i-am-overlay").style.opacity = 0;
-    //         document.getElementById("who-i-am-overlay-mobile").style.opacity = 0;
-    //     }
-
-    //     // Fading in and out about "What I Do" heading
-    //     if (window.scrollY < aboutSectionFourth) {
-    //         // document.getElementById("what-i-do-overlay").style.opacity = 0.9 - (window.scrollY / aboutSectionFourth);
-    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0.9 - (window.scrollY / aboutSectionFourth);
-    //     } else if (window.scrollY > aboutSectionFourth) {
-    //         // document.getElementById("what-i-do-overlay").style.opacity = 0;
-    //         document.getElementById("what-i-do-overlay-mobile").style.opacity = 0;
-    //     }
-
-    //     // Fading in and out Design and Development link
-    //     if (window.scrollY < aboutSectionFourth) {
-    //         // document.getElementById("design-development-overlay").style.opacity = window.scrollY / aboutSectionFourth;
-    //         document.getElementById("design-development-overlay-mobile").style.opacity = window.scrollY / aboutSectionFourth;
-    //     } else if (window.scrollY > aboutSectionFourth && window.scrollY < (aboutSectionFourth * 3)) {
-    //         // document.getElementById("design-development-overlay").style.opacity = 1
-    //         document.getElementById("design-development-overlay-mobile").style.opacity = 1
-    //     } else if (window.scrollY > (aboutSectionFourth * 3) && window.scrollY < aboutSectionHeight) {
-    //         // document.getElementById("design-development-overlay").style.opacity = 1 - ((window.scrollY - (aboutSectionFourth * 3)) / aboutSectionFourth);
-    //         document.getElementById("design-development-overlay-mobile").style.opacity = 1 - ((window.scrollY - (aboutSectionFourth * 3)) / aboutSectionFourth);
-    //     } else if (window.scrollY > aboutSectionHeight) {
-    //         // document.getElementById("design-development-overlay").style.opacity = 0
-    //         document.getElementById("design-development-overlay-mobile").style.opacity = 0
-    //     }
-
-    //     // Setting the z-index so about link is not clickable when not visible.
-    //     if (window.scrollY < 5) {
-    //         // document.getElementById("design-development-overlay").style.zIndex = -1;
-    //         document.getElementById("design-development-overlay-mobile").style.zIndex = -1;
-    //     } else if (window.scrollY > 5 && window.scrollY < aboutSectionHeight) {
-    //         // document.getElementById("design-development-overlay").style.zIndex = 5;
-    //         document.getElementById("design-development-overlay-mobile").style.zIndex = 5;
-    //     } else if (window.scrollY > aboutSectionHeight) {
-    //         // document.getElementById("design-development-overlay").style.zIndex = -1;
-    //         document.getElementById("design-development-overlay-mobile").style.zIndex = -1;
-    //     }
-
-    // //     // Fading in and out portfolio "What I Do" heading
-    // //     if (window.scrollY < (aboutSectionHeight + (codingSectionFourth * 3))) {
-    // //         document.getElementById("what-i-do-portfolio-overlay").style.opacity = 0;
-    // //         document.getElementById("what-i-do-portfolio-overlay-mobile").style.opacity = 0;
-    // //     } else if (window.scrollY > (aboutSectionHeight + (codingSectionFourth * 3)) && window.scrollY < ((codingSectionHeight * 2) - 25)) {
-    // //         document.getElementById("what-i-do-portfolio-overlay").style.opacity = ((window.scrollY - (aboutSectionHeight + (codingSectionFourth * 3))) / codingSectionFourth);
-    // //         document.getElementById("what-i-do-portfolio-overlay-mobile").style.opacity = ((window.scrollY - (aboutSectionHeight + (codingSectionFourth * 3))) / codingSectionFourth);
-    // //         document.getElementById("what-i-do-portfolio-overlay").style.zIndex = 3;
-    // //         document.getElementById("what-i-do-portfolio-overlay-mobile").style.zIndex = 3;
-    // //     } else if (window.scrollY > ((codingSectionHeight * 2) - 25)) {
-    // //         document.getElementById("what-i-do-portfolio-overlay").style.opacity = 0.9;
-    // //         document.getElementById("what-i-do-portfolio-overlay-mobile").style.opacity = 0.9;
-    // //         document.getElementById("what-i-do-portfolio-overlay").style.zIndex = 3;
-    // //         document.getElementById("what-i-do-portfolio-overlay-mobile").style.zIndex = 3;
-    // //     }
-
-    // //     // Fading in and out "Web Development" link
-    // //     if (window.scrollY < (codingSectionHeight * 2)) {
-    // //         document.getElementById("coding-overlay").style.opacity = 0;
-    // //         document.getElementById("coding-overlay-mobile").style.opacity = 0;
-    // //     } else if (window.scrollY > (codingSectionHeight * 2) && window.scrollY < ((codingSectionHeight * 2) + codingSectionFourth)) {
-    // //         document.getElementById("coding-overlay").style.opacity = ((window.scrollY - (codingSectionHeight * 2)) / codingSectionFourth);
-    // //         document.getElementById("coding-overlay-mobile").style.opacity = ((window.scrollY - (codingSectionHeight * 2)) / codingSectionFourth);
-    // //     } else if (window.scrollY > ((codingSectionHeight * 2) + codingSectionFourth) && window.scrollY < ((codingSectionHeight * 3) - codingSectionFourth)) {
-    // //         document.getElementById("coding-overlay").style.opacity = 1;
-    // //         document.getElementById("coding-overlay-mobile").style.opacity = 1;
-    // //     } else if (window.scrollY > ((codingSectionHeight * 3) - codingSectionFourth)) {
-    // //         document.getElementById("coding-overlay").style.opacity = 1 - ((window.scrollY - ((codingSectionHeight * 3) - codingSectionFourth)) / codingSectionFourth);
-    // //         document.getElementById("coding-overlay-mobile").style.opacity = 1 - ((window.scrollY - ((codingSectionHeight * 3) - codingSectionFourth)) / codingSectionFourth);
-    // //     }
-
-    // //     // Setting the z-index so portfolio link is not clickable when not visible.
-    // //     if (window.scrollY < (codingSectionHeight * 2)) {
-    // //         document.getElementById("coding-overlay").style.zIndex = -1;
-    // //         document.getElementById("coding-overlay-mobile").style.zIndex = -1;
-    // //     } else if (window.scrollY > (codingSectionHeight * 2) && window.scrollY < (codingSectionHeight * 3)) {
-    // //         document.getElementById("coding-overlay").style.zIndex = 5;
-    // //         document.getElementById("coding-overlay-mobile").style.zIndex = 5;
-    // //     } else if (window.scrollY > (codingSectionHeight * 3)) {
-    // //         document.getElementById("coding-overlay").style.zIndex = -1;
-    // //         document.getElementById("coding-overlay-mobile").style.zIndex = -1;
-    // //     }
-
-    // // };
-
-    // // let handleBackgroundPosition = () => {
-
-    // //     let aboutSectionHeight = document.getElementById("profile-pic-home-top").scrollHeight;
-    // //     let codingSectionHeight = document.getElementById("coding-pic-home-top").scrollHeight;
-
-    // //     console.log(aboutSectionHeight);
-    // //     console.log(codingSectionHeight);
-    // //     document.getElementById("profile-pic-home-top").scrollTop = 0;
-    // //     // document.getElementById("coding-pic-home-top").scrollTop;
-
-    // // }
-
-    // // let aboutLinkMouseOver = () => {
-    // //     document.getElementById("design-development-overlay").style.transform = "scale(1.025)";
-    // // };
-
-    // // let portfolioLinkMouseOver = () => {
-    // //     document.getElementById("coding-overlay").style.transform = "scale(1.025)";
-    // // };
-
-    // // let aboutLinkMouseOut = () => {
-    // //     document.getElementById("design-development-overlay").style.transform = "scale(1)";
-    // // };
-
-    // // let portfolioLinkMouseOut = () => {
-    // //     document.getElementById("coding-overlay").style.transform = "scale(1)";
-    // };
+        // Fading in and out about "Who I Am" heading
+        if (window.scrollY < whoIAmSectionHeightFourth) {
+            document.getElementById("portfolio-overlay-home").style.opacity = 1;
+            document.getElementById("portfolio-overlay-home").style.opacity = 1;
+        } else if (window.scrollY > whoIAmSectionHeightFourth && window.scrollY < (whoIAmSectionHeightFourth * 2)) {
+            document.getElementById("portfolio-overlay-home").style.opacity = 1 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 2) - whoIAmSectionHeightFourth));
+            document.getElementById("portfolio-overlay-home").style.opacity = 1 - ((window.scrollY - whoIAmSectionHeightFourth) / ((whoIAmSectionHeightFourth * 2) - whoIAmSectionHeightFourth));
+        } else if (window.scrollY > (whoIAmSectionHeightFourth * 2)) {
+            document.getElementById("portfolio-overlay-home").style.opacity = 0;
+            document.getElementById("portfolio-overlay-home").style.opacity = 0;
+        }
+    }
 
     return (
         <main>
+            
+            <section className="portfolio-bg-home"></section>
 
-            <h1 className="hidden-header">Tanner Moore: Who I Am &amp; What I Do.</h1>
+            <section id="profile-pic-home" className="profile-pic-home">
 
-            <section id="about-container" className="sticky-container-about">
+                <section id="portfolio-overlay-home" className="portfolio-overlay">
 
-                <section className="bg-main-about"></section>
-
-                <section className="about-heading-overlay">
-
-                    <img id="who-i-am-what-i-do-overlay-desktop" className="who-i-am-overlay desktop" src={whoIAmOverlay} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-                    <img id="who-i-am-what-i-do-overlay-mobile" className="who-i-am-overlay mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-                </section>
-
-                <section className="about-link-parent-mobile">
-
-                    <Link to="/about" id="design-development-overlay-mobile" className="who-i-am-overlay mobile">
-                        <img className="who-i-am-overlay mobile" src={designDevelopmentMobile} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
-                    </Link>
-
-                </section>
-
-            </section>
-
-            <section id="portfolio-container" className="sticky-container-portfolio">
-
-                <section className="bg-main-portfolio"></section>
-
-                <section className="portfolio-heading-parent-mobile">
-
-                    <img id="what-i-do-portfolio-overlay-mobile" className="coding-overlay-home mobile" src={whatIDoPortfolioOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-                </section>
-
-                <section className="about-link-parent-mobile">
-
-                    <Link to="/portfolio" id="coding-overlay-mobile" className="coding-overlay mobile">
-                        <img className="coding-overlay mobile" src={webDevelopmentMobile} alt="Web Design &amp; Development"></img>
-                    </Link>
-
-                </section>
-
-            </section>
-
-            {/* Heading overlay, "Who I am & What I do"
-            <section id="profile-pic-home-top" className="profile-pic-home top">
-                Desktop
-                <img id="who-i-am-overlay" className="profile-overlay-home desktop" src={whoIAmOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-                <img id="what-i-do-overlay" className="profile-overlay-home desktop" src={whatIDoOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-                Mobile
-                <section className="about-background-image"></section>
-
-                <img id="who-i-am-overlay-mobile" className="profile-overlay-home mobile" src={whoIAmOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                <img id="what-i-do-overlay-mobile" className="profile-overlay-home mobile" src={whatIDoOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-            </section>
-
-            <section id="profile-pic-home-bottom" className="profile-pic-home bottom">
-                <Link to="/about" id="design-development-overlay" className="who-i-am-overlay desktop">
-                    <img className="who-i-am-overlay desktop" src={designDevelopmentDesktop} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
-                </Link>
-
-                <Link to="/about" id="design-development-overlay-mobile" className="who-i-am-overlay mobile">
-                    <img className="who-i-am-overlay mobile" src={designDevelopmentMobile} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
-                </Link>
-            </section> */}
-
-            {/* <section id="coding-pic-home-top" className="coding-pic-home">
-                <img id="what-i-do-portfolio-overlay" className="coding-overlay-home desktop" src={whatIDoPortfolioOverlayDesktop} alt="Tanner Moore–Who I Am" loading="lazy" />
-
-                <img id="what-i-do-portfolio-overlay-mobile" className="coding-overlay-home mobile" src={whatIDoPortfolioOverlayMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-            </section>
-
-            <section id="coding-pic-home-bottom" className="coding-pic-home">
-                <Link to="/portfolio" id="coding-overlay" className="coding-overlay desktop">
-                    <img className="coding-overlay desktop" src={webDevelopmentDesktop} alt="Web Design &amp; Development"></img>
-                </Link>
-
-                <Link to="/portfolio" id="coding-overlay-mobile" className="coding-overlay mobile">
-                    <img className="coding-overlay mobile" src={webDevelopmentMobile} alt="Web Design &amp; Development"></img>
-                </Link>
-            </section> */}
-
-            {/* <h1 className="hidden-header">Tanner Moore: Who I Am &amp; What I Do.</h1>
-
-            <section className="card grid-container grid-x align-center home">
-
-                <section className="grid-x grid-margin-x homeMenu">
-                    Home menu.
-                    <section className="cell home card web-dev portfolio">
-                        <img className="web-dev-photo desktop" src={profilePicDesktop} alt="Tanner Moore–Who I Am"></img>
-                        <img className="web-dev-photo mobile" src={profilePicMobile} alt="Tanner Moore–Who I Am" loading="lazy" />
-                        <Link to="/about" className="home-overlay about">
-                            <img className="web-dev-photo desktop" src={whatIDoDesktop} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
-                            <img className="web-dev-photo mobile" src={whatIDoMobile} alt="Creative Design Thinker &amp; Full-Stack Developer"></img>
+                    <section className="intro-overlay">
+                        <img className="intro-heading" src={introHeader} alt="Designer. Optimizer. Developer." />
+                        <img className="intro-heading-mobile" src={introHeaderMobile} alt="Designer. Optimizer. Developer." />
+                        <p className="intro-paragraph">Hacking at and creating top notch user experiences that elevate conversion rate.</p>
+                        <p className="intro-paragraph">
+                            <img className="job-title" src={jobTitle} alt="UX/CRO Specialist"/>
+                            on the team at&nbsp;
+                            <img className="company-name" src={companyName} alt="Chamber Media"/>
+                        </p>
+                        <p className="intro-paragraph">Simple man trying to make his way in the world.</p>
+                        <Link to="#explore-moore">
+                            <img className="explore-moore" src={exploreMoore} alt="Explore Moore..." />
                         </Link>
                     </section>
+
+                </section>
+                
+                <h1 className="hidden-header">Who I Am</h1>
+
+            </section>
+
+            <section id="explore-moore" className="card grid-container grid-x about">
+
+                <section className="card-section">
+
+                    <section className="grid-x headline">
+
+                        <h2 className="hidden-header">User Experience Design</h2>
+
+                        {/* Design Headline. */}
+                        <section className="cell large-7">
+                            <img className="about-header" src={uxDesignHeader} alt="User Experience Design" loading="lazy" />
+                            <img className="about-header-mobile" src={uxDesignHeaderMobile} alt="User Experience Design" loading="lazy" />
+                            <ul className="card-section aboutMe design">
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Understanding of design principles necessary to ensure a pleasant experience for users.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Capable of combining the creative and analytical sides of user eperience design.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Experienced with a variety of web design tool, technologies, and systems.</p>
+                            </ul>
+                            <Link to="/portfolio/design">
+                                <img className="explore-moore-section" src={exploreMooreSection} alt="Explore Moore..." />
+                            </Link>
+                        </section>
+
+                        <section className="cell large-5 project-teaser">
+                            <ProjectTeaserHome
+                                appName="Ultimate Business Quest"
+                                projectPage="/portfolio/ultimate-business-quest"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="ultimate-business-quest"
+                                appHeader={BusinessQuestHeader}
+                                appGif={BusinessQuestGif}
+                                gifAlt="Ultimate Business Quest Screenshot"
+                                frameLanguages="Unbounce"
+                                appDescription="Take the worry and stress out of traveling with Traveler."
+                            />
+                        </section>
+
+                        <section className="cell large-5 project-teaser mobile">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={BusinessQuestHeader}
+                                appGif={BusinessQuestGifMobile}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Take the worry and stress out of traveling with Traveler."
+                            />
+                        </section>
+
+                    </section>
+
+                    <section className="grid-x headline">
+
+                        <section className="cell large-5 project-teaser top">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={UrinariXHeader}
+                                appGif={UrinariXGif}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Avoid figuring out the right antibiotics for urinary tract support."
+                            />
+                        </section>
+
+                        <h2 className="hidden-header">Conversion Rate Optimization</h2>
+
+                        {/* Conversion Headline. */}
+                        <section className="cell large-7 cro">
+                            <img className="about-header" src={croHeader} alt="Conversion Rate Optimization" loading="lazy" />
+                            <img className="about-header-mobile" src={croHeaderMobile} alt="Conversion Rate Optimization" loading="lazy" />
+                            <ul className="card-section aboutMe develop">
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Knowledge of user experience design principles to best optimize for conversions.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Experienced with A/B testing to determine best areas for conversion optimizations.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Able to utilize conversion tracking tools to understand entire conversion funnel.</p>
+                            </ul>
+                            <Link to="/portfolio/optimize">
+                                <img className="explore-moore-section" src={exploreMooreSection} alt="Explore Moore..." />
+                            </Link>
+                        </section>
+
+                        <section className="cell large-5 project-teaser bottom">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={UrinariXHeader}
+                                appGif={UrinariXGif}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Avoid figuring out the right antibiotics for urinary tract support."
+                            />
+                        </section>
+
+                        <section className="cell large-5 project-teaser mobile">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={UrinariXHeader}
+                                appGif={UrinariXGifMobile}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Avoid figuring out the right antibiotics for urinary tract support."
+                            />
+                        </section>
+
+                    </section>
+
+                    <section className="grid-x headline">
+
+                        <h2 className="hidden-header">Full-Stack Web Development</h2>
+
+                        {/* Design Headline. */}
+                        <section className="cell large-7">
+                            <img className="about-header" src={developerHeader} alt="Full-Stack Web Developer" loading="lazy" />
+                            <img className="about-header-mobile" src={developerHeaderMobile} alt="Full-Stack Web Developer" loading="lazy" />
+                            <ul className="card-section aboutMe design">
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Experienced with various web development languages, frameworks, and technologies.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">HTML, CSS, JavaScript, React, Express.js, Mongoose, Sequelize, and more.</p>
+                                <img className="about-check" src={checkMark} alt="Checkmark" loading="lazy" />
+                                <p className="aboutMe-bullet">Able to implement web designs and develop a polished and responsive website.</p>
+                            </ul>
+                            <Link to="/portfolio/develop">
+                                <img className="explore-moore-section" src={exploreMooreSection} alt="Explore Moore..." />
+                            </Link>
+                        </section>
+
+                        <section className="cell large-5 project-teaser">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={TravelerHeader}
+                                appGif={TravelerGif}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Take the worry and stress out of traveling with Traveler."
+                            />
+                        </section>
+
+                        <section className="cell large-5 project-teaser mobile">
+                            <ProjectTeaserHome
+                                appName="Traveler"
+                                projectPage="/portfolio/traveler"
+                                appLink="https://shrouded-brushlands-11149.herokuapp.com/"
+                                appID="traveler"
+                                appHeader={TravelerHeader}
+                                appGif={TravelerGifMobile}
+                                gifAlt="Traveler Screen Recording"
+                                frameLanguages="HTML | CSS | JavaScript | React | Foundation CSS | Node.js | Express.js | Mongoose | React Big Calendar | Passport | Bcrypt"
+                                appDescription="Take the worry and stress out of traveling with Traveler."
+                            />
+                        </section>
+
+                    </section>
+
                 </section>
 
-                <section className="grid-x grid-margin-x medium-up-2 homeMenu">
-                    <section className="cell home card web-dev portfolio">
-                        <img className="web-dev-photo-home" src={codingLanguagesMobile} alt="What I Do–Coding Languages"></img>
-                        <Link to="/portfolio" className="home-overlay work">
-                            <img className="web-dev-photo desktop" src={webDevelopmentWork} alt="Web Design &amp; Development"></img>
-                        </Link>
-                    </section>
-                    <section className="cell home card web-dev portfolio">
-                        <img className="web-dev-photo-home" src={mtnLogo} alt="Get in Touch–Mountain Logo"></img>
-                        <Link to="/contact" className="home-overlay connect">
-                            <img className="web-dev-photo desktop" src={letsConnect} alt="Let's Connect"></img>
-                        </Link>
-                    </section>
-                </section>
-
-            </section> */}
+            </section>
 
         </main>
     )

@@ -4,7 +4,7 @@ import React from "react";
 import "./Footer.css"
 
 // Importing Tanner Moore Productions logo.
-import Logo from "../assets/images/logos/tannermoore_productions.png";
+import Logo from "../assets/images/logos/tannermoore_productions_white.png";
 
 // Importing Font Awesome icons.
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -68,7 +68,7 @@ const Footer = () => {
                     <img className="footer-logo" src={Logo} alt="Tanner Moore Productions">
                     </img>
                         <figcaption className="copyright">
-                            Copyright &#169; 2021 All Rights Reserved
+                            Copyright &#169; 2022 All Rights Reserved
                         </figcaption>
                 </figure>
 

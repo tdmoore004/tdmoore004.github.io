@@ -1,11 +1,11 @@
 main.card.grid-container.grid-x.align-center.contact {
     margin-top: 60px;
     width: 95%;
-    max-width: 650px;
+    max-width: 750px;
     align-self: center;
     border-radius: 5px 5px 5px 5px;
     border: none;
-    background-color: rgb(15, 15, 15, 0.9);;
+    background-color: rgb(25, 25, 25, 0.9);;
 }
 
 h3.card-divider.contact {
