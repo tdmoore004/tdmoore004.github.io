@@ -14,6 +14,7 @@ import PortfolioOpt from "./pages/PortfolioOpt.jsx"
 import PortfolioDev from "./pages/PortfolioDev.jsx"
 import ProjectPage from "./pages/ProjectPage.jsx"
 import Contact from "./pages/Contact.jsx"
+import Test from "./pages/Test.jsx"
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
             <Route exact path="/portfolio/develop" component={PortfolioDev}/>
             <Route exact path={["/portfolio/traveler", "/portfolio/furlodge", "/portfolio/boredom-buster", "/portfolio/devour-da-burger", "/portfolio/budget-tracker", "/portfolio/fitness-tracker", "/portfolio/ultimate-business-quest", "/portfolio/sun-home-saunas", "/portfolio/code-of-entry", "/portfolio/dree", "/portfolio/water-automation", "/portfolio/chamber-media-mvp", "/portfolio/life-seasons-urinari-x", "/portfolio/capstone-payment-solutions", "/portfolio/access-heating", "/portfolio/chamber-media-cro", "/portfolio/sling-shot", "/portfolio/sun-shrimp"]} component={ProjectPage}/>
             <Route exact path="/contact" component={Contact}/>
-            <Route exact path="/test" component={Contact}/>
+            <Route exact path="/test" component={Test}/>
           </Switch>
         <Footer/>
       </div>
