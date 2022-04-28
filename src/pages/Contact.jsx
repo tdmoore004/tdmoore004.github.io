@@ -51,8 +51,6 @@ const Contact = () => {
                     <section className="card-section contact">
                         <h5 className="contactMe">Contact form coming post haste!</h5>
                         <div className="grid-x grid-margin-x medium-up-2">
-                            <p className="contactMe cell">Email: <a className="contactInfo" href="mailto:tdmoore004@gmail.com">tdmoore004@gmail.com</a></p>
-                            <p className="contactMe cell">Phone: <a className="contactInfo" href="tel:3852457184">(385) 245-7184</a></p>
                         </div>
                     </section>
 
